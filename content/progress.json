@@ -1,9 +1,13 @@
 {
   "literature": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "space": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "cars": {
     "next_index": 1,
     "cycled": false
   }

@@ -4,13 +4,13 @@
     {
       "slot": "Literature",
       "topic": "literature",
-      "fact": "Mary Shelley was 18 when she began writing \"Frankenstein\", and it was published anonymously in 1818 when she was 20.",
+      "fact": "The longest sentence in a classic novel is often cited from Victor Hugo's \"Les Misérables\": one sentence runs over 800 words.",
       "repeat": false
     },
     {
       "slot": "Other",
-      "topic": "space",
-      "fact": "A day on Venus is longer than its year: it takes 243 Earth days to rotate once but only 225 to orbit the Sun.",
+      "topic": "cars",
+      "fact": "The first speeding ticket was issued in 1896 to a driver going 8 mph in a 2 mph zone in Kent, England.",
       "repeat": false
     }
   ]
