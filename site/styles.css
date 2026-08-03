@@ -58,8 +58,8 @@ body {
 
 /* Slots */
 .slots {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
 }
 
@@ -69,6 +69,7 @@ body {
   border-radius: var(--radius);
   padding: 1.15rem 1.25rem 1.3rem;
   box-shadow: 0 1px 2px rgba(43, 42, 38, 0.04);
+  min-width: 0;
 }
 
 .card .slot-name {
@@ -85,6 +86,7 @@ body {
   font-size: 1.15rem;
   line-height: 1.5;
   color: var(--ink);
+  overflow-wrap: break-word;
 }
 
 /* Status / empty / error states */
@@ -97,6 +99,42 @@ body {
   background: var(--card);
   border: 1px dashed var(--line);
   border-radius: var(--radius);
+}
+
+/* Tablet / iPad: two-column card grid with larger, arm's-length type. */
+@media (min-width: 48rem) {
+  .page {
+    max-width: 52rem;
+    padding-top: max(2.5rem, env(safe-area-inset-top));
+  }
+
+  .masthead {
+    margin-bottom: 2.25rem;
+  }
+
+  .date {
+    font-size: 2rem;
+  }
+
+  .slots {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+  }
+
+  /* A lone final card (odd number of slots) spans the full width instead of
+     leaving an empty half-row. */
+  .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .card {
+    padding: 1.4rem 1.55rem 1.55rem;
+  }
+
+  .card .fact {
+    font-size: 1.25rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
