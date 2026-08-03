@@ -4,13 +4,13 @@
     {
       "slot": "Literature",
       "topic": "literature",
-      "fact": "Agatha Christie is the best-selling novelist of all time, with an estimated two billion copies sold across her works.",
+      "fact": "The word \"nerd\" first appeared in print in Dr. Seuss's 1950 book \"If I Ran the Zoo\".",
       "repeat": false
     },
     {
       "slot": "Other",
-      "topic": "gardening",
-      "fact": "Sunflowers exhibit heliotropism when young, turning to face the sun across the day, but mature flowers typically settle facing east.",
+      "topic": "ai",
+      "fact": "The term \"artificial intelligence\" was coined at the 1956 Dartmouth workshop, widely regarded as the founding event of the field.",
       "repeat": false
     }
   ]
