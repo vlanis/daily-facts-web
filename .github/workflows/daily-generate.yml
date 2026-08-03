@@ -31,22 +31,41 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Generate today's facts
-        run: node scripts/generate.mjs
-
-      - name: Commit and push if changed
+      - name: Generate, commit, and push
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add content/progress.json content/flags.json site/today.json site/archive
+          # Regenerate against the latest remote state and push, retrying if the
+          # branch advanced underneath us. A run can be checked out at a stale
+          # SHA (checkout pins the branch SHA as of run creation, so a run
+          # queued behind another executes on an older base); resetting to the
+          # freshest remote before generating keeps progress.json's cursor
+          # correct and avoids non-fast-forward push rejections.
+          for attempt in 1 2 3; do
+            git fetch --quiet origin "${GITHUB_REF_NAME}"
+            git reset --quiet --hard "origin/${GITHUB_REF_NAME}"
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
+            node scripts/generate.mjs
 
-          DATE=$(node -e "process.stdout.write(require('./site/today.json').date)")
-          git commit -m "chore: generate facts for ${DATE}"
-          git push
+            git add content/progress.json content/flags.json site/today.json site/archive
+            if git diff --cached --quiet; then
+              echo "No changes to commit."
+              exit 0
+            fi
+
+            DATE=$(node -e "process.stdout.write(require('./site/today.json').date)")
+            git commit -m "chore: generate facts for ${DATE}"
+
+            if git push; then
+              echo "Pushed on attempt ${attempt}."
+              exit 0
+            fi
+
+            echo "Push rejected (branch advanced); retrying (${attempt}/3)..."
+            sleep 3
+          done
+
+          echo "Failed to push after 3 attempts." >&2
+          exit 1
