@@ -1,6 +1,6 @@
 {
   "literature": {
-    "next_index": 3,
+    "next_index": 4,
     "cycled": false
   },
   "space": {
@@ -12,6 +12,10 @@
     "cycled": false
   },
   "gardening": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "ai": {
     "next_index": 1,
     "cycled": false
   }
