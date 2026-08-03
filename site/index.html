@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Daily Facts</title>
+    <meta name="description" content="A curated set of interesting facts, every day." />
+
+    <!-- Home Screen / Safari -->
+    <meta name="theme-color" content="#f6f4ef" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Daily Facts" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page" id="page">
+      <header class="masthead">
+        <p class="eyebrow">Daily Facts</p>
+        <h1 class="date" id="date">&nbsp;</h1>
+      </header>
+
+      <section id="slots" class="slots" aria-live="polite"></section>
+
+      <p class="status" id="status" hidden></p>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

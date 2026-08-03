@@ -1,0 +1,10 @@
+{
+  "literature": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "space": {
+    "next_index": 1,
+    "cycled": false
+  }
+}
