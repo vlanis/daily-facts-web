@@ -4,13 +4,13 @@
     {
       "slot": "Literature",
       "topic": "literature",
-      "fact": "The longest sentence in a classic novel is often cited from Victor Hugo's \"Les Misérables\": one sentence runs over 800 words.",
+      "fact": "Agatha Christie is the best-selling novelist of all time, with an estimated two billion copies sold across her works.",
       "repeat": false
     },
     {
       "slot": "Other",
-      "topic": "cars",
-      "fact": "The first speeding ticket was issued in 1896 to a driver going 8 mph in a 2 mph zone in Kent, England.",
+      "topic": "gardening",
+      "fact": "Sunflowers exhibit heliotropism when young, turning to face the sun across the day, but mature flowers typically settle facing east.",
       "repeat": false
     }
   ]
