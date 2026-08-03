@@ -1,0 +1,17 @@
+{
+  "date": "2026-08-03",
+  "slots": [
+    {
+      "slot": "Literature",
+      "topic": "literature",
+      "fact": "Mary Shelley was 18 when she began writing \"Frankenstein\", and it was published anonymously in 1818 when she was 20.",
+      "repeat": false
+    },
+    {
+      "slot": "Other",
+      "topic": "space",
+      "fact": "A day on Venus is longer than its year: it takes 243 Earth days to rotate once but only 225 to orbit the Sun.",
+      "repeat": false
+    }
+  ]
+}

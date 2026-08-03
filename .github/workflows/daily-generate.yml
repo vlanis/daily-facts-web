@@ -1,0 +1,52 @@
+name: Daily generate
+
+# Generates today's facts once a day and commits the result.
+# See specs/automation.md and specs/generation-algorithm.md.
+
+on:
+  schedule:
+    # ~00:00 Kyiv time during standard time (UTC+2); ~01:00 during EEST
+    # (UTC+3). The ~1h DST drift and GitHub scheduling slack are accepted,
+    # not engineered around (see specs/automation.md).
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+# Only the built-in token is used; no PAT, no secrets to manage.
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-generate
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Generate today's facts
+        run: node scripts/generate.mjs
+
+      - name: Commit and push if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add content/progress.json content/flags.json site/today.json site/archive
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          DATE=$(node -e "process.stdout.write(require('./site/today.json').date)")
+          git commit -m "chore: generate facts for ${DATE}"
+          git push

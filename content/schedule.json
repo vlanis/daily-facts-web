@@ -1,0 +1,35 @@
+{
+  "weekdays": {
+    "monday": [
+      { "slot": "Literature", "topics": ["literature"] },
+      { "slot": "Other", "topics": ["ai", "space", "cooking", "cars", "gardening"] }
+    ],
+    "tuesday": [
+      { "slot": "Science", "topics": ["space", "ai"] },
+      { "slot": "Other", "topics": ["cooking", "cars", "gardening", "literature"] }
+    ],
+    "wednesday": [
+      { "slot": "Literature", "topics": ["literature"] },
+      { "slot": "Other", "topics": ["ai", "space", "cooking", "cars", "gardening"] }
+    ],
+    "thursday": [
+      { "slot": "Science", "topics": ["space", "ai"] },
+      { "slot": "Other", "topics": ["cooking", "cars", "gardening", "literature"] }
+    ],
+    "friday": [
+      { "slot": "Literature", "topics": ["literature"] },
+      { "slot": "Other", "topics": ["ai", "space", "cooking", "cars", "gardening"] }
+    ],
+    "saturday": [
+      { "slot": "Weekend Pick", "topics": ["travel", "cooking", "gardening"] }
+    ],
+    "sunday": [
+      { "slot": "Weekend Pick", "topics": ["travel", "space", "literature"] }
+    ]
+  },
+  "dates": {
+    "2026-08-15": [
+      { "slot": "Anniversary", "topics": ["travel"] }
+    ]
+  }
+}

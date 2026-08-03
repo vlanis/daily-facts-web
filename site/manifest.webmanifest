@@ -1,0 +1,17 @@
+{
+  "name": "Daily Facts",
+  "short_name": "Daily Facts",
+  "description": "A curated set of interesting facts, every day.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f6f4ef",
+  "theme_color": "#f6f4ef",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
