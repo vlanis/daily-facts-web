@@ -12,6 +12,7 @@
 // Usage:
 //   node scripts/collection-status.mjs            # topics still short of target
 //   node scripts/collection-status.mjs --all      # every topic, including done
+//   node scripts/collection-status.mjs --notes    # lines flagged for review
 //
 // Exit code is always 0 — an incomplete collection is a normal state, not an
 // error. Malformed draft lines are reported here but only import-drafts.mjs
@@ -60,8 +61,73 @@ function countDraft(topic) {
   return counts;
 }
 
+// Collects every draft line carrying a `note`, in file order. Notes are the
+// review queue: they mark lines where a figure, attribution or wording needs a
+// human decision before the line is approved. Notes never reach topics.json.
+function collectNotes(topics, includeParked) {
+  const found = [];
+  for (const [topic, def] of Object.entries(topics)) {
+    // A parked topic's notes are bookkeeping (dates to preserve), not a review
+    // queue — they would otherwise swamp the lines that need a decision.
+    if (def.parked === true && !includeParked) continue;
+    let text;
+    try {
+      text = readFileSync(join(DRAFTS, `${topic}.jsonl`), "utf8");
+    } catch {
+      continue;
+    }
+    text.split("\n").forEach((raw, i) => {
+      if (raw.trim() === "") return;
+      let obj;
+      try {
+        obj = JSON.parse(raw);
+      } catch {
+        return; // reported as unparseable by the main table
+      }
+      if (obj?.note) {
+        found.push({ topic, line: i + 1, fact: obj.fact, note: obj.note });
+      }
+    });
+  }
+  return found;
+}
+
+function reportNotes(topics, includeParked) {
+  const notes = collectNotes(topics, includeParked);
+  const parkedCount = includeParked
+    ? 0
+    : collectNotes(topics, true).length - notes.length;
+
+  console.log("Draft lines carrying a review note");
+  console.log("");
+  if (notes.length === 0) {
+    console.log("  none — nothing flagged for review.");
+    return;
+  }
+  for (const n of notes) {
+    const fact = n.fact.length > 95 ? n.fact.slice(0, 95) + "…" : n.fact;
+    console.log(`── ${n.topic}.jsonl:${n.line}`);
+    console.log(`   ФАКТ: ${fact}`);
+    console.log(`   NOTE: ${n.note}`);
+  }
+  console.log("");
+  console.log(`  ${notes.length} line(s) flagged.`);
+  if (parkedCount > 0) {
+    console.log(
+      `  (+${parkedCount} in parked topics, hidden — use --notes --all)`,
+    );
+  }
+}
+
 function main() {
-  const showAll = process.argv.slice(2).includes("--all");
+  const args = process.argv.slice(2);
+  const showAll = args.includes("--all");
+
+  if (args.includes("--notes")) {
+    const manifest = readJSON(join(CONTENT, "collection-targets.json"));
+    reportNotes(manifest.topics ?? {}, showAll);
+    return;
+  }
 
   const manifest = readJSON(join(CONTENT, "collection-targets.json"));
   const topics = manifest.topics ?? {};
