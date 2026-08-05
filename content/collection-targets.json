@@ -1,0 +1,245 @@
+{
+  "_comment": "Collection plan for content/drafts/*.jsonl. Read by scripts/collection-status.mjs. NOT read by generate.mjs, validate.mjs, or import-drafts.mjs (which globs *.jsonl only). 'wave_q1' is the 3-month runway target at 4 slots/day; see the plan for 1-year figures.",
+  "slots_per_day": 4,
+  "topics": {
+    "literature": {
+      "band": "very often",
+      "draws_per_week": 4.0,
+      "wave_q1": 52,
+      "lang": "uk",
+      "brief": "Світова література, що передує 2000 року: твори, автори, історії створення."
+    },
+    "literature_modern": {
+      "band": "very often",
+      "draws_per_week": 4.0,
+      "wave_q1": 52,
+      "lang": "uk",
+      "brief": "Світова література від 2000 року: твори, автори, премії, видавнича справа."
+    },
+    "literature_ua": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "uk",
+      "brief": "Українська література: автори, твори, історії, забуті постаті."
+    },
+    "space": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "uk",
+      "brief": "Космос і астрономія: цікаві наукові факти."
+    },
+    "technology": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "uk",
+      "brief": "Технології з різних сфер упродовж усієї історії людства."
+    },
+    "popculture": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "uk",
+      "brief": "Світова попкультура 1900–2000: музика, кіно, телебачення, мода, явища."
+    },
+    "popculture_modern": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "uk",
+      "brief": "Світова попкультура від 2000 року."
+    },
+    "english": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "en",
+      "brief": "English phrases and usage advice pitched at Upper-Intermediate, plus linguistic facts and history of the language.",
+      "constraint": "Written in English, not Ukrainian — the one exception to the Ukrainian default."
+    },
+    "ukrainian_language": {
+      "band": "often",
+      "draws_per_week": 1.1,
+      "wave_q1": 15,
+      "lang": "uk",
+      "brief": "Історія розвитку української мови, цікаві факти, рідковживані слова та фрази — особливо нетипові для центральної України."
+    },
+    "medicine": {
+      "band": "moderate",
+      "draws_per_week": 0.92,
+      "wave_q1": 12,
+      "lang": "uk",
+      "brief": "Медицина та біологія: тіло людини, історія медицини, фізіологія.",
+      "constraint": "Факти, а не поради щодо здоров'я. Нічого, що можна прочитати як медичну рекомендацію."
+    },
+    "travel": {
+      "band": "moderate",
+      "draws_per_week": 0.92,
+      "wave_q1": 12,
+      "lang": "uk",
+      "brief": "Географія та цікаві місця, які варто побачити."
+    },
+    "history_ancient": {
+      "band": "moderate",
+      "draws_per_week": 0.92,
+      "wave_q1": 12,
+      "lang": "uk",
+      "brief": "Давня історія."
+    },
+    "history_modern": {
+      "band": "moderate",
+      "draws_per_week": 0.92,
+      "wave_q1": 12,
+      "lang": "uk",
+      "brief": "Новітня історія."
+    },
+    "history_ua": {
+      "band": "moderate",
+      "draws_per_week": 0.92,
+      "wave_q1": 12,
+      "lang": "uk",
+      "brief": "Історія України."
+    },
+    "gardening": {
+      "band": "not often",
+      "draws_per_week": 0.73,
+      "wave_q1": 10,
+      "lang": "uk",
+      "brief": "Життя рослин, а також поради для тих, хто має садівництво за хобі."
+    },
+    "japanese": {
+      "band": "not often",
+      "draws_per_week": 0.73,
+      "wave_q1": 10,
+      "lang": "uk",
+      "brief": "Японська мова для початківця, з ухилом в історію та цікаві факти.",
+      "constraint": "Текст українською; японські слова подавати з транслітерацією та перекладом."
+    },
+    "animals": {
+      "band": "not often",
+      "draws_per_week": 0.73,
+      "wave_q1": 10,
+      "lang": "uk",
+      "brief": "Тварини — і дикі, і свійські."
+    },
+    "guinness": {
+      "band": "not often",
+      "draws_per_week": 0.73,
+      "wave_q1": 10,
+      "lang": "uk",
+      "brief": "Рекорди та досягнення з Книги рекордів Гіннеса.",
+      "constraint": "У межах кожної хвилі додавати від найновіших до найдавніших."
+    },
+    "ai": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Штучний інтелект."
+    },
+    "cooking": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Цікаві факти про кулінарію або короткі, прості та негенеричні рецепти."
+    },
+    "cars": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Автомобілі — для того, хто не є автолюбителем."
+    },
+    "videogames": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Відеоігри для того, хто в них не грає: дослідження, рекорди, технології, вплив на культуру та мистецтво."
+    },
+    "porn": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Індустрія для дорослих очима стороннього: дослідження, рекорди, вплив на технології, право та культуру.",
+      "constraint": "Без відвертих описів. Тільки дослідження, статистика, історія індустрії та її технологічний і культурний вплив."
+    },
+    "phrase": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Фраза дня — випадковий вислів, що має сенс.",
+      "constraint": "Суспільне надбання або коротка цитата з атрибуцією."
+    },
+    "predictions": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Жартівливе передбачення для того, хто в них не вірить.",
+      "constraint": "Вигадане, не досліджене — поле source навмисно відсутнє."
+    },
+    "book_fiction": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Рекомендація художньої книги.",
+      "constraint": "Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним."
+    },
+    "book_fantasy": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Рекомендація фентезі-книги.",
+      "constraint": "Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним."
+    },
+    "verse": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Короткий вірш дня.",
+      "constraint": "Суспільне надбання або коротка цитата з атрибуцією — уникати чинних авторських прав."
+    },
+    "painting": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Картина дня: назва та автор, плюс посилання на зображення.",
+      "constraint": "Нічого російського походження. Посилання — на стабільне джерело (Wikimedia Commons або сайт музею)."
+    },
+    "movie": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Рекомендація фільму.",
+      "constraint": "Нічого російського чи радянського походження або пов'язаного з ним."
+    },
+    "cartoon": {
+      "band": "occasionally",
+      "draws_per_week": 0.37,
+      "wave_q1": 5,
+      "lang": "uk",
+      "brief": "Рекомендація мультфільму чи аніме для дорослої аудиторії.",
+      "constraint": "Нічого російського чи радянського походження або пов'язаного з ним."
+    },
+    "holidays": {
+      "band": "parked",
+      "draws_per_week": 0,
+      "wave_q1": 20,
+      "lang": "uk",
+      "brief": "Унікальні та цікаві свята з різних країн, прив'язані до конкретних дат.",
+      "parked": true,
+      "constraint": "НЕ імпортувати. Лінії лишаються у статусі draft назавжди — прив'язка до дат потребує окремого рішення щодо schedule.json dates."
+    }
+  }
+}

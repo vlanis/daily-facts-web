@@ -89,6 +89,13 @@ body {
   overflow-wrap: break-word;
 }
 
+/* Links inside fact text (e.g. a painting's image). break-all so a long URL
+   can't push the card wider than the phone screen. */
+.card .fact a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
 /* Status / empty / error states */
 .status {
   margin: 2rem 0 0;
