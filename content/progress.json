@@ -16,7 +16,11 @@
     "cycled": false
   },
   "ai": {
-    "next_index": 3,
+    "next_index": 4,
+    "cycled": false
+  },
+  "cooking": {
+    "next_index": 1,
     "cycled": false
   }
 }
