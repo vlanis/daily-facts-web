@@ -32,6 +32,35 @@
     }
   }
 
+  // Bare URLs in fact text (e.g. a painting's image link) should be tappable.
+  // Everything is appended as text nodes or as an anchor whose href and label
+  // are set via properties, so fact content is never parsed as HTML.
+  var URL_RE = /https?:\/\/[^\s<>"']+/g;
+
+  function appendFactText(el, text) {
+    var str = String(text == null ? "" : text);
+    var last = 0;
+    var m;
+    URL_RE.lastIndex = 0;
+    while ((m = URL_RE.exec(str)) !== null) {
+      if (m.index > last) {
+        el.appendChild(document.createTextNode(str.slice(last, m.index)));
+      }
+      // Don't swallow sentence punctuation that happens to follow the URL.
+      var href = m[0].replace(/[.,;:!?)\]]+$/, "");
+      var a = document.createElement("a");
+      a.href = href;
+      a.textContent = href;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      el.appendChild(a);
+      last = m.index + href.length;
+    }
+    if (last < str.length) {
+      el.appendChild(document.createTextNode(str.slice(last)));
+    }
+  }
+
   function renderSlots(slots) {
     var frag = document.createDocumentFragment();
     slots.forEach(function (slot) {
@@ -44,7 +73,7 @@
 
       var fact = document.createElement("p");
       fact.className = "fact";
-      fact.textContent = slot.fact;
+      appendFactText(fact, slot.fact);
 
       // Note: `repeat` and `topic` are operational metadata and are
       // intentionally not shown to the reader (see specs/ui.md).
