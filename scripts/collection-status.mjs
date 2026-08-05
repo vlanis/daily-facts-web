@@ -102,16 +102,16 @@ function reportNotes(topics, includeParked) {
   console.log("");
   if (notes.length === 0) {
     console.log("  none — nothing flagged for review.");
-    return;
+  } else {
+    for (const n of notes) {
+      const fact = n.fact.length > 95 ? n.fact.slice(0, 95) + "…" : n.fact;
+      console.log(`── ${n.topic}.jsonl:${n.line}`);
+      console.log(`   ФАКТ: ${fact}`);
+      console.log(`   NOTE: ${n.note}`);
+    }
+    console.log("");
+    console.log(`  ${notes.length} line(s) flagged.`);
   }
-  for (const n of notes) {
-    const fact = n.fact.length > 95 ? n.fact.slice(0, 95) + "…" : n.fact;
-    console.log(`── ${n.topic}.jsonl:${n.line}`);
-    console.log(`   ФАКТ: ${fact}`);
-    console.log(`   NOTE: ${n.note}`);
-  }
-  console.log("");
-  console.log(`  ${notes.length} line(s) flagged.`);
   if (parkedCount > 0) {
     console.log(
       `  (+${parkedCount} in parked topics, hidden — use --notes --all)`,
