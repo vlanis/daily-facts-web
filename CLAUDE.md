@@ -50,11 +50,13 @@ thing that ever mutates state.
   topics.json      # per-topic fact lists (append-only)
   schedule.json     # weekday slots + date-specific additional slots
   progress.json      # per-topic read cursor + cycled flag (source of truth)
+  drafts/<topic>.jsonl  # mutable staging area for collected facts
 /site/
   index.html / app.js / today.json  # static reader
   archive/YYYY-MM-DD.json            # optional per-day history
 /scripts/
   generate.*        # daily generation logic, run by the workflow
+  import-drafts.mjs  # promotes approved drafts into topics.json (append-only)
 /.github/workflows/
   daily-generate.yml
 CLAUDE.md
