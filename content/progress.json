@@ -1,10 +1,10 @@
 {
   "literature": {
-    "next_index": 0,
+    "next_index": 1,
     "cycled": true
   },
   "space": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "cars": {
