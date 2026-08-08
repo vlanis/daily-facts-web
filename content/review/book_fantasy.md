@@ -3,7 +3,7 @@
 
 *Рекомендація фентезі-книги.*
 
-**5 facts · 0 approved · 0 imported · target 5 · lang uk**
+**5 facts · 0 approved · 0 imported · target 4 · lang uk**
 
 > ℹ️ Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним.
 

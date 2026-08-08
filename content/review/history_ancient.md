@@ -3,7 +3,7 @@
 
 *Давня історія.*
 
-**12 facts · 0 approved · 0 imported · target 11 · lang uk**
+**12 facts · 0 approved · 0 imported · target 10 · lang uk**
 
 Tick `- [ ]` → `- [x]` to approve. Unticking an approved fact sends it back to draft. Lines marked `[~]` are already imported and are locked.
 

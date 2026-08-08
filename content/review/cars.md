@@ -3,7 +3,7 @@
 
 *Автомобілі — для того, хто не є автолюбителем.*
 
-**5 facts · 0 approved · 0 imported · target 5 · lang uk**
+**5 facts · 0 approved · 0 imported · target 4 · lang uk**
 
 Tick `- [ ]` → `- [x]` to approve. Unticking an approved fact sends it back to draft. Lines marked `[~]` are already imported and are locked.
 

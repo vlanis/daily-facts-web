@@ -3,7 +3,7 @@
 
 *Фраза дня — випадковий вислів, що має сенс.*
 
-**5 facts · 0 approved · 0 imported · target 5 · lang uk**
+**5 facts · 0 approved · 0 imported · target 4 · lang uk**
 
 > ℹ️ Суспільне надбання або коротка цитата з атрибуцією.
 
