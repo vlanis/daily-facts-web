@@ -3,7 +3,7 @@
 
 *Рекорди та досягнення з Книги рекордів Гіннеса.*
 
-**10 facts · 0 approved · 0 imported · target 9 · lang uk**
+**10 facts · 0 approved · 0 imported · target 8 · lang uk**
 
 > ℹ️ У межах кожної хвилі додавати від найновіших до найдавніших.
 

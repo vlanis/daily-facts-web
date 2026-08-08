@@ -3,7 +3,7 @@
 
 *English phrases and usage advice pitched at Upper-Intermediate, plus linguistic facts and history of the language.*
 
-**15 facts · 0 approved · 0 imported · target 13 · lang en**
+**15 facts · 0 approved · 0 imported · target 12 · lang en**
 
 > ℹ️ Written in English, not Ukrainian — the one exception to the Ukrainian default.
 

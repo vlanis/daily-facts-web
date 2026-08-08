@@ -3,7 +3,7 @@
 
 *Жартівливе передбачення для того, хто в них не вірить.*
 
-**5 facts · 0 approved · 0 imported · target 5 · lang uk**
+**5 facts · 0 approved · 0 imported · target 4 · lang uk**
 
 > ℹ️ Вигадане, не досліджене — поле source навмисно відсутнє.
 

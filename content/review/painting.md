@@ -3,7 +3,7 @@
 
 *Картина дня: назва та автор, плюс посилання на зображення.*
 
-**5 facts · 0 approved · 0 imported · target 5 · lang uk**
+**5 facts · 0 approved · 0 imported · target 4 · lang uk**
 
 > ℹ️ Нічого російського походження. Посилання — на стабільне джерело (Wikimedia Commons або сайт музею).
 

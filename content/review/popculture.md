@@ -3,7 +3,7 @@
 
 *Світова попкультура 1900–2000: музика, кіно, телебачення, мода, явища.*
 
-**15 facts · 0 approved · 0 imported · target 13 · lang uk**
+**15 facts · 0 approved · 0 imported · target 12 · lang uk**
 
 Tick `- [ ]` → `- [x]` to approve. Unticking an approved fact sends it back to draft. Lines marked `[~]` are already imported and are locked.
 
