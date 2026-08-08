@@ -59,7 +59,7 @@ function parseReview(file) {
       `${file}: missing review header — regenerate it with review-export.mjs`,
     );
   }
-  const [, topic, , fp] = m;
+  const [, topic, expected, fp] = m;
 
   const decisions = [];
   for (const raw of lines) {
@@ -67,6 +67,20 @@ function parseReview(file) {
     if (!item) continue;
     decisions.push({ box: item[1], line: Number(item[2]) });
   }
+
+  // The header records how many items were exported. A shortfall means the
+  // checklist has been mangled — an editor reformatting the list markers, or
+  // items deleted by accident — and silently applying the survivors would
+  // quietly send the missing facts back to draft.
+  if (decisions.length !== Number(expected)) {
+    throw new Error(
+      `${file}: found ${decisions.length} checklist items but the header ` +
+        `expects ${expected}. The file has been altered beyond ticking boxes ` +
+        `(an editor reformatting the list is the usual cause).\n` +
+        `   Re-run: node scripts/review-export.mjs ${topic}`,
+    );
+  }
+
   return { file, topic, fingerprint: fp, decisions };
 }
 
