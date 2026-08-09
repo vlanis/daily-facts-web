@@ -1,35 +1,76 @@
 {
   "weekdays": {
     "monday": [
-      { "slot": "Literature", "topics": ["literature"] },
-      { "slot": "Other", "topics": ["ai", "space", "cooking", "cars", "gardening"] }
+      { "slot": "Fact for a kid", "topics": ["kids"] },
+      { "slot": "Literature", "topics": ["literature","literature_modern","literature_ua"] },
+      { "slot": "Popculture", "topics": ["popculture","popculture_modern"] },
+      { "slot": "Technology", "topics": ["technology"] },
+      { "slot": "Ukrainian Language", "topics": ["ukrainian_language"] },
+      { "slot": "Urban Dictionary", "topics": ["urban_dictionary"] },
+      { "slot": "Things", "topics": ["animals","gardening","cooking"] },
+      { "slot": "Cinema and other toons", "topics": ["cartoon","movie"] },
+      { "slot": "Phrase", "topics": ["phrase"] }
     ],
     "tuesday": [
-      { "slot": "Science", "topics": ["space", "ai"] },
-      { "slot": "Other", "topics": ["cooking", "cars", "gardening", "literature"] }
+      { "slot": "Modern Literature", "topics": ["literature_modern"] },
+      { "slot": "English", "topics": ["english","english_words"] },
+      { "slot": "Legends", "topics": ["legends_ua","legends_urban","legends_world"] },
+      { "slot": "Space", "topics": ["space"] },
+      { "slot": "Useless Facts", "topics": ["useless_facts"] },
+      { "slot": "Medicine", "topics": ["medicine"] },
+      { "slot": "Words", "topics": ["ukrainian_words"] },
+      { "slot": "Japanese", "topics": ["japanese"] }
     ],
     "wednesday": [
-      { "slot": "Literature", "topics": ["literature"] },
-      { "slot": "Other", "topics": ["ai", "space", "cooking", "cars", "gardening"] }
+      { "slot": "Fact for a kid", "topics": ["kids"] },
+      { "slot": "Urban Legends", "topics": ["legends_urban"] },
+      { "slot": "Technology", "topics": ["technology"] },
+      { "slot": "Ukrainian Language", "topics": ["ukrainian_language"] },
+      { "slot": "History", "topics": ["history_ancient","history_modern","history_ua"] },
+      { "slot": "Legends Japan", "topics": ["legends_japan"] },
+      { "slot": "Guinness World Records", "topics": ["guinness"] },
+      { "slot": "Predictions", "topics": ["predictions"] }
     ],
     "thursday": [
-      { "slot": "Science", "topics": ["space", "ai"] },
-      { "slot": "Other", "topics": ["cooking", "cars", "gardening", "literature"] }
+      { "slot": "Literature", "topics": ["literature","literature_modern","literature_ua"] },
+      { "slot": "English", "topics": ["english","english_words"] },
+      { "slot": "Popculture", "topics": ["popculture","popculture_modern"] },
+      { "slot": "Space", "topics": ["space"] },
+      { "slot": "Medicine", "topics": ["medicine"] },
+      { "slot": "Urban Dictionary", "topics": ["urban_dictionary"] },
+      { "slot": "Things", "topics": ["animals","gardening","cooking"] }
     ],
     "friday": [
-      { "slot": "Literature", "topics": ["literature"] },
-      { "slot": "Other", "topics": ["ai", "space", "cooking", "cars", "gardening"] }
+      { "slot": "Fact for a kid", "topics": ["kids"] },
+      { "slot": "Modern Literature", "topics": ["literature_modern"] },
+      { "slot": "Ukranian Legends", "topics": ["legends_ua"] },
+      { "slot": "Technology", "topics": ["technology"] },
+      { "slot": "Ukrainian Language", "topics": ["ukrainian_language"] },
+      { "slot": "Travel", "topics": ["travel"] },
+      { "slot": "Japanese", "topics": ["japanese"] },
+      { "slot": "Painting", "topics": ["painting"] }
     ],
     "saturday": [
-      { "slot": "Weekend Pick", "topics": ["travel", "cooking", "gardening"] }
+      { "slot": "English", "topics": ["english","english_words"] },
+      { "slot": "Legends", "topics": ["legends_ua","legends_urban","legends_world"] },
+      { "slot": "Ukranian Literature", "topics": ["literature_ua"] },
+      { "slot": "Popculture", "topics": ["popculture","popculture_modern"] },
+      { "slot": "Space", "topics": ["space"] },
+      { "slot": "Words", "topics": ["ukrainian_words"] },
+      { "slot": "Books", "topics": ["book_fiction","book_fantasy"] },
+      { "slot": "Stuff", "topics": ["cars","porn","ai","videogames"] }
     ],
     "sunday": [
-      { "slot": "Weekend Pick", "topics": ["travel", "space", "literature"] }
+      { "slot": "Fact for a kid", "topics": ["kids"] },
+      { "slot": "English", "topics": ["english","english_words"] },
+      { "slot": "Useless Facts", "topics": ["useless_facts"] },
+      { "slot": "History", "topics": ["history_ancient","history_modern","history_ua"] },
+      { "slot": "Legends Japan", "topics": ["legends_japan"] },
+      { "slot": "Travel", "topics": ["travel"] },
+      { "slot": "Verse", "topics": ["verse"] },
+      { "slot": "Stuff", "topics": ["cars","porn","ai","videogames"] }
     ]
   },
   "dates": {
-    "2026-08-15": [
-      { "slot": "Anniversary", "topics": ["travel"] }
-    ]
   }
 }
