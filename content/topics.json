@@ -1,67 +1,23 @@
 {
-  "literature": {
-    "facts": [
-      "Mary Shelley was 18 when she began writing \"Frankenstein\", and it was published anonymously in 1818 when she was 20.",
-      "The longest sentence in a classic novel is often cited from Victor Hugo's \"Les Misérables\": one sentence runs over 800 words.",
-      "Agatha Christie is the best-selling novelist of all time, with an estimated two billion copies sold across her works.",
-      "The word \"nerd\" first appeared in print in Dr. Seuss's 1950 book \"If I Ran the Zoo\".",
-      "Fyodor Dostoevsky wrote \"The Gambler\" in just 26 days to pay off a gambling debt, dictating it to a stenographer he later married.",
-      "\"Don Quixote\", published in two parts (1605 and 1615), is frequently called the first modern European novel."
-    ]
-  },
-  "space": {
-    "facts": [
-      "A day on Venus is longer than its year: it takes 243 Earth days to rotate once but only 225 to orbit the Sun.",
-      "Neutron stars are so dense that a sugar-cube-sized amount of their material would weigh about a billion tonnes on Earth.",
-      "There is a giant cloud of alcohol in the constellation Aquila, roughly 1,000 times the diameter of our solar system.",
-      "The footprints left by Apollo astronauts on the Moon will likely last millions of years, since there is no wind or liquid water to erase them.",
-      "Saturn's density is so low that, given a large enough body of water, the planet would float.",
-      "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth."
-    ]
-  },
   "ai": {
-    "facts": [
-      "The term \"artificial intelligence\" was coined at the 1956 Dartmouth workshop, widely regarded as the founding event of the field.",
-      "The perceptron, an early neural network, was built as a physical machine in 1958 and was expected by some to soon \"walk, talk, see, and write\".",
-      "ELIZA, a 1966 chatbot that mimicked a psychotherapist, fooled some users into believing it understood them, despite using simple pattern matching.",
-      "The \"Turing Test\", proposed by Alan Turing in 1950, was originally called the \"Imitation Game\".",
-      "AlphaGo's 2016 \"move 37\" against Lee Sedol was so unconventional that commentators initially thought it was a mistake."
-    ]
-  },
-  "cooking": {
-    "facts": [
-      "Honey never spoils: sealed pots of honey found in ancient Egyptian tombs were still edible after thousands of years.",
-      "Searing meat does not \"seal in\" juices; that idea, popularized in the 1800s, has been repeatedly disproven, though searing does add flavor.",
-      "The Maillard reaction, responsible for browning and much of cooked food's flavor, was described by French chemist Louis-Camille Maillard in 1912.",
-      "Nutmeg is mildly hallucinogenic and toxic in large doses because it contains a compound called myristicin.",
-      "Carrots were originally purple and white; the familiar orange variety was cultivated in the Netherlands around the 16th–17th century."
-    ]
+    "facts": []
   },
   "cars": {
-    "facts": [
-      "The first speeding ticket was issued in 1896 to a driver going 8 mph in a 2 mph zone in Kent, England.",
-      "The Bugatti Veyron's tires cost tens of thousands of dollars per set and, at top speed, would drain a full tank of fuel in about 12 minutes.",
-      "Volkswagen means \"people's car\" in German; the Beetle became one of the best-selling car designs in history.",
-      "Cruise control was invented by Ralph Teetor, a mechanical engineer who was blind from childhood.",
-      "The average car spends roughly 95% of its lifetime parked."
-    ]
+    "facts": []
+  },
+  "cooking": {
+    "facts": []
   },
   "gardening": {
-    "facts": [
-      "Sunflowers exhibit heliotropism when young, turning to face the sun across the day, but mature flowers typically settle facing east.",
-      "Bananas are berries, botanically speaking, while strawberries are not.",
-      "Some bamboo species can grow up to nearly a metre in a single day under ideal conditions.",
-      "Marigolds are often planted alongside vegetables because their roots release compounds that can deter certain soil nematodes.",
-      "The world's oldest known living tree is a Great Basin bristlecone pine in California, estimated to be over 4,850 years old."
-    ]
+    "facts": []
+  },
+  "literature": {
+    "facts": []
+  },
+  "space": {
+    "facts": []
   },
   "travel": {
-    "facts": [
-      "Russia spans 11 time zones, more than any other country on Earth.",
-      "The shortest scheduled commercial flight, between the Scottish islands of Westray and Papa Westray, lasts under two minutes.",
-      "Canada has the longest coastline of any country, at over 200,000 kilometres.",
-      "The Trans-Siberian Railway is the longest railway line in the world, running roughly 9,289 kilometres from Moscow to Vladivostok.",
-      "There is a single point where you can stand in four U.S. states at once: the Four Corners of Arizona, Colorado, New Mexico, and Utah."
-    ]
+    "facts": []
   }
 }
