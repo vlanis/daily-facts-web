@@ -5,3 +5,6 @@
 .claude/settings.local.json
 .claude/hooks/
 .claude/.commit-reviewed
+
+# Obsidian vault config — editor state, created when reviewing content/review/
+.obsidian/
