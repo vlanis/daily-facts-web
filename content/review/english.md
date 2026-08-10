@@ -1,9 +1,9 @@
-<!-- daily-facts-review v1 topic=english entries=26 fingerprint=73f2159b39f1 -->
+<!-- daily-facts-review v1 topic=english entries=26 fingerprint=4367d63d66b4 -->
 # english
 
 *English phrases and usage advice pitched at Upper-Intermediate, plus linguistic facts and history of the language.*
 
-**26 facts · 0 approved · 15 imported · target 26 · lang en**
+**26 facts · 0 approved · 26 imported · target 26 · lang en**
 
 > ℹ️ Written in English, not Ukrainian — the one exception to the Ukrainian default.
 
@@ -58,36 +58,36 @@ Then run: `node scripts/review-apply.mjs`
 - [~] **15.** English lost its formal "you" the other way around from most languages. "Thou" was the informal singular; "you" was the polite plural. Politeness won so completely that the intimate form disappeared entirely, leaving English the only major European language with no tu/vous distinction.
   <br>↳ *David Crystal, «The Stories of English»*
 
-- [x] **16.** Two useful softeners for disagreement: "I see what you mean, but…" and "That's fair, though…". Both signal you have understood before objecting, which in English matters more than the objection itself.
+- [~] **16.** Two useful softeners for disagreement: "I see what you mean, but…" and "That's fair, though…". Both signal you have understood before objecting, which in English matters more than the objection itself.
   <br>↳ *Business English usage guides*
 
-- [x] **17.** "Sorry" in British English is rarely an apology. It works as "excuse me" (getting past someone), "pardon?" (I didn't hear), and even as mild protest ("sorry, but that's not right"). Counting apologies in a British conversation badly overstates the contrition.
+- [~] **17.** "Sorry" in British English is rarely an apology. It works as "excuse me" (getting past someone), "pardon?" (I didn't hear), and even as mild protest ("sorry, but that's not right"). Counting apologies in a British conversation badly overstates the contrition.
   <br>↳ *British English pragmatics*
 
-- [x] **18.** The present perfect trips up most learners because it links past to present: "I have lost my keys" means they are still lost. "I lost my keys" is a finished event — you may well have found them since.
+- [~] **18.** The present perfect trips up most learners because it links past to present: "I have lost my keys" means they are still lost. "I lost my keys" is a finished event — you may well have found them since.
   <br>↳ *Cambridge Grammar of the English Language*
 
-- [x] **19.** "Used to" and "be used to" are unrelated. "I used to smoke" is a past habit now stopped. "I'm used to smoking" means it feels normal. The second takes -ing, the first a bare verb.
+- [~] **19.** "Used to" and "be used to" are unrelated. "I used to smoke" is a past habit now stopped. "I'm used to smoking" means it feels normal. The second takes -ing, the first a bare verb.
   <br>↳ *Cambridge Dictionary, usage notes*
 
-- [x] **20.** English has no word for the day after tomorrow, though many languages do. Speakers manage with the phrase itself, or borrow *overmorrow*, an archaic word that never quite came back.
+- [~] **20.** English has no word for the day after tomorrow, though many languages do. Speakers manage with the phrase itself, or borrow *overmorrow*, an archaic word that never quite came back.
   <br>↳ *Oxford English Dictionary, «overmorrow»*
 
-- [x] **21.** Stress changes the part of speech in dozens of English pairs: *REcord* the noun versus *reCORD* the verb, *PREsent* versus *preSENT*, *OBject* versus *obJECT*. The spelling never changes, so only listening reveals it.
+- [~] **21.** Stress changes the part of speech in dozens of English pairs: *REcord* the noun versus *reCORD* the verb, *PREsent* versus *preSENT*, *OBject* versus *obJECT*. The spelling never changes, so only listening reveals it.
   <br>↳ *English phonology: initial-stress-derived nouns*
 
-- [x] **22.** "Do you mind…?" is answered backwards. "Do you mind if I sit here?" — "No, not at all" means yes, please do. Answering "yes" means you object, which is why the polite reply is usually a phrase rather than a bare word.
+- [~] **22.** "Do you mind…?" is answered backwards. "Do you mind if I sit here?" — "No, not at all" means yes, please do. Answering "yes" means you object, which is why the polite reply is usually a phrase rather than a bare word.
   <br>↳ *English pragmatics; Cambridge Dictionary*
 
-- [x] **23.** Contractions are not casual sloppiness — they are the norm. Writing "I do not think so" instead of "I don't think so" sounds emphatic or cold, not more correct. Full forms are for stress and formal documents.
+- [~] **23.** Contractions are not casual sloppiness — they are the norm. Writing "I do not think so" instead of "I don't think so" sounds emphatic or cold, not more correct. Full forms are for stress and formal documents.
   <br>↳ *English usage guides*
 
-- [x] **24.** The phrase "with all due respect" almost always precedes disrespect. Native speakers hear it as a warning, not a courtesy — much like "no offence, but".
+- [~] **24.** The phrase "with all due respect" almost always precedes disrespect. Native speakers hear it as a warning, not a courtesy — much like "no offence, but".
   <br>↳ *English pragmatics*
 
-- [x] **25.** English is unusual in placing adjectives before the noun and keeping them there. "The red big car" is wrong, "the big red car" is right, and no native speaker can explain why without being told the rule exists.
+- [~] **25.** English is unusual in placing adjectives before the noun and keeping them there. "The red big car" is wrong, "the big red car" is right, and no native speaker can explain why without being told the rule exists.
   <br>↳ *Mark Forsyth, «The Elements of Eloquence»*
 
-- [x] **26.** "Shall" survives mainly in questions offering to do something: "Shall I open the window?" As a future marker it has almost vanished from speech, though legal English still uses it to impose obligations.
+- [~] **26.** "Shall" survives mainly in questions offering to do something: "Shall I open the window?" As a future marker it has almost vanished from speech, though legal English still uses it to impose obligations.
   <br>↳ *Merriam-Webster; legal drafting conventions*
 
