@@ -145,8 +145,21 @@ if (schedule && typeof schedule === "object") {
   }
   if (schedule.dates && typeof schedule.dates === "object") {
     for (const [date, slots] of Object.entries(schedule.dates)) {
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-        err(`schedule.json: dates key "${date}" is not YYYY-MM-DD`);
+      // "MM-DD" recurs every year; "YYYY-MM-DD" fires once.
+      const recurring = /^\d{2}-\d{2}$/.test(date);
+      if (!recurring && !/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+        err(`schedule.json: dates key "${date}" is not MM-DD or YYYY-MM-DD`);
+      } else {
+        const [mo, day] = (recurring ? date : date.slice(5)).split("-").map(Number);
+        if (mo < 1 || mo > 12 || day < 1 || day > 31) {
+          err(`schedule.json: dates key "${date}" is not a real calendar date`);
+        }
+        if (recurring && mo === 2 && day === 29) {
+          warn(
+            `schedule.json: dates key "${date}" only fires in leap years — ` +
+              `use a YYYY-MM-DD key per year if that is not intended`,
+          );
+        }
       }
       checkSlotArray(slots, `dates.${date}`);
     }

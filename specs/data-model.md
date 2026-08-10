@@ -84,8 +84,17 @@ Defines which slots exist on which days.
 - `dates` entries are **additive**: on a matching calendar date, these
   slots are generated *in addition to* that date's normal weekday slots,
   never in place of them.
-- Date keys are `YYYY-MM-DD`, interpreted in Europe/Kyiv local date terms
-  (see `specs/automation.md` for how "today's date" is determined).
+- Date keys come in two forms, both interpreted in Europe/Kyiv local date
+  terms (see `specs/automation.md` for how "today's date" is determined):
+  - **`MM-DD`** — recurring: fires on that day **every year**. This is the
+    normal form for an annual fixture such as a holiday.
+  - **`YYYY-MM-DD`** — fires once, on that specific day. Use it for a
+    year-specific occasion, or for a festival whose date moves between years
+    (lunar calendars, "the last Monday of May"), which a recurring key
+    cannot express.
+  Both may match the same day; like everything under `dates` they are
+  additive, and the recurring entry is resolved first.
+  Note that `02-29` as a recurring key only fires in leap years.
 
 ## `content/progress.json`
 
