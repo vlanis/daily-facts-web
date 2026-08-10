@@ -1,9 +1,9 @@
-<!-- daily-facts-review v1 topic=english entries=15 fingerprint=5f53db4d89d0 -->
+<!-- daily-facts-review v1 topic=english entries=26 fingerprint=73f2159b39f1 -->
 # english
 
 *English phrases and usage advice pitched at Upper-Intermediate, plus linguistic facts and history of the language.*
 
-**15 facts · 0 approved · 0 imported · target 12 · lang en**
+**26 facts · 0 approved · 15 imported · target 26 · lang en**
 
 > ℹ️ Written in English, not Ukrainian — the one exception to the Ukrainian default.
 
@@ -13,48 +13,81 @@ Then run: `node scripts/review-apply.mjs`
 
 ---
 
-- [x] **1.** "I'm good" and "I'm well" are not interchangeable. "How are you?" — "I'm good" describes your general state; "I'm well" specifically means you are not ill. Native speakers use "good" far more often, so the textbook correction to "well" is usually the less natural choice.
+- [~] **1.** "I'm good" and "I'm well" are not interchangeable. "How are you?" — "I'm good" describes your general state; "I'm well" specifically means you are not ill. Native speakers use "good" far more often, so the textbook correction to "well" is usually the less natural choice.
   <br>↳ *Merriam-Webster, usage notes on good/well*
 
-- [x] **2.** English has no future tense — not grammatically. "Will" is a modal verb, and "going to", the present continuous and even the present simple all express future time. That is why "My train leaves at six" is perfectly correct for tomorrow.
+- [~] **2.** English has no future tense — not grammatically. "Will" is a modal verb, and "going to", the present continuous and even the present simple all express future time. That is why "My train leaves at six" is perfectly correct for tomorrow.
   <br>↳ *Cambridge Grammar of the English Language*
 
-- [x] **3.** Adjective order in English is fixed, and every native speaker follows it without ever being taught it: opinion, size, age, shape, colour, origin, material, purpose. "A lovely little old rectangular green French silver whittling knife" sounds fine; reorder any two words and it sounds broken.
+- [~] **3.** Adjective order in English is fixed, and every native speaker follows it without ever being taught it: opinion, size, age, shape, colour, origin, material, purpose. "A lovely little old rectangular green French silver whittling knife" sounds fine; reorder any two words and it sounds broken.
   <br>↳ *Mark Forsyth, «The Elements of Eloquence»*
 
-- [x] **4.** "Literally" has been used to mean "figuratively" for over two centuries — Dickens, Joyce and Austen all did it. Dictionaries now record both senses, which infuriates purists but simply reflects how the word has always actually been used.
+- [~] **4.** "Literally" has been used to mean "figuratively" for over two centuries — Dickens, Joyce and Austen all did it. Dictionaries now record both senses, which infuriates purists but simply reflects how the word has always actually been used.
   <br>↳ *Oxford English Dictionary, entry for «literally»*
 
-- [x] **5.** Use "fewer" for things you can count and "less" for things you cannot: fewer bottles, less water. The supermarket sign "10 items or less" is the most-complained-about grammar mistake in Britain — several chains have quietly changed theirs to "fewer".
+- [~] **5.** Use "fewer" for things you can count and "less" for things you cannot: fewer bottles, less water. The supermarket sign "10 items or less" is the most-complained-about grammar mistake in Britain — several chains have quietly changed theirs to "fewer".
   <br>↳ *Plain English Campaign; Tesco signage change (2008)*
 
-- [x] **6.** A useful pair to keep straight: "I could care less" literally means you do care somewhat. The intended phrase is "I couldn't care less" — you care so little that less is impossible.
+- [~] **6.** A useful pair to keep straight: "I could care less" literally means you do care somewhat. The intended phrase is "I couldn't care less" — you care so little that less is impossible.
   <br>↳ *Merriam-Webster, usage notes*
 
-- [x] **7.** The word "set" has one of the longest entries in the Oxford English Dictionary — over 400 distinct senses. "Run" has since overtaken it, with more than 600 meanings in modern use.
+- [~] **7.** The word "set" has one of the longest entries in the Oxford English Dictionary — over 400 distinct senses. "Run" has since overtaken it, with more than 600 meanings in modern use.
   <br>↳ *Oxford English Dictionary; Simon Winchester on the OED*
 
-- [x] **8.** English borrowed so heavily that roughly 60% of its vocabulary comes from Latin and French. The everyday words tend to be Germanic and the formal ones Romance — which is why you "ask" a friend but "enquire" at a desk, and eat "pork" (French) from a "pig" (English).
+- [~] **8.** English borrowed so heavily that roughly 60% of its vocabulary comes from Latin and French. The everyday words tend to be Germanic and the formal ones Romance — which is why you "ask" a friend but "enquire" at a desk, and eat "pork" (French) from a "pig" (English).
   <br>↳ *David Crystal, «The Stories of English»*
 
-- [x] **9.** "Nice" originally meant "foolish" or "ignorant", from the Latin «nescius». Over 700 years it drifted through "fussy", "precise" and "delicate" before settling on "pleasant" — one of the most complete meaning reversals in the language.
+- [~] **9.** "Nice" originally meant "foolish" or "ignorant", from the Latin «nescius». Over 700 years it drifted through "fussy", "precise" and "delicate" before settling on "pleasant" — one of the most complete meaning reversals in the language.
   <br>↳ *Oxford English Dictionary, etymology of «nice»*
 
-- [x] **10.** A phrasal verb changes meaning completely depending on the particle: to "take off" (leave the ground), "take in" (deceive or absorb), "take on" (accept a challenge), "take over" (assume control). This is the single hardest part of English for learners, because none of it can be deduced from «take».
+- [~] **10.** A phrasal verb changes meaning completely depending on the particle: to "take off" (leave the ground), "take in" (deceive or absorb), "take on" (accept a challenge), "take over" (assume control). This is the single hardest part of English for learners, because none of it can be deduced from «take».
   <br>↳ *Cambridge Dictionary, phrasal verbs with «take»*
 
-- [x] **11.** "Whom" is dying, and that is fine. It survives mainly after prepositions — "to whom it may concern", "with whom I spoke". In ordinary speech, "who did you give it to?" is now standard, and insisting on "whom" can sound stiff rather than educated.
+- [~] **11.** "Whom" is dying, and that is fine. It survives mainly after prepositions — "to whom it may concern", "with whom I spoke". In ordinary speech, "who did you give it to?" is now standard, and insisting on "whom" can sound stiff rather than educated.
   <br>↳ *Merriam-Webster, usage notes on who/whom*
 
-- [x] **12.** The most useful hedging phrases in professional English are not grammar but tone: "I'd say", "it seems that", "as far as I know", "correct me if I'm wrong". They let you make a claim while leaving room to be wrong — which native speakers do constantly.
+- [~] **12.** The most useful hedging phrases in professional English are not grammar but tone: "I'd say", "it seems that", "as far as I know", "correct me if I'm wrong". They let you make a claim while leaving room to be wrong — which native speakers do constantly.
   <br>↳ *Academic and business English usage guides*
 
-- [x] **13.** "Actually" in English does not mean "currently" — that is a false friend with many European languages. "Actually" means "in fact" and often signals a polite correction: "Actually, the meeting is at three."
+- [~] **13.** "Actually" in English does not mean "currently" — that is a false friend with many European languages. "Actually" means "in fact" and often signals a polite correction: "Actually, the meeting is at three."
   <br>↳ *Cambridge Dictionary, «actually»*
 
-- [x] **14.** The letter combination "ough" can be pronounced at least eight different ways: though, through, thought, tough, cough, bough, thorough, hiccough. This is a fossil of pronunciation shifts that spelling never caught up with.
+- [~] **14.** The letter combination "ough" can be pronounced at least eight different ways: though, through, thought, tough, cough, bough, thorough, hiccough. This is a fossil of pronunciation shifts that spelling never caught up with.
   <br>↳ *David Crystal, «Spell It Out»*
 
-- [x] **15.** English lost its formal "you" the other way around from most languages. "Thou" was the informal singular; "you" was the polite plural. Politeness won so completely that the intimate form disappeared entirely, leaving English the only major European language with no tu/vous distinction.
+- [~] **15.** English lost its formal "you" the other way around from most languages. "Thou" was the informal singular; "you" was the polite plural. Politeness won so completely that the intimate form disappeared entirely, leaving English the only major European language with no tu/vous distinction.
   <br>↳ *David Crystal, «The Stories of English»*
+
+- [x] **16.** Two useful softeners for disagreement: "I see what you mean, but…" and "That's fair, though…". Both signal you have understood before objecting, which in English matters more than the objection itself.
+  <br>↳ *Business English usage guides*
+
+- [x] **17.** "Sorry" in British English is rarely an apology. It works as "excuse me" (getting past someone), "pardon?" (I didn't hear), and even as mild protest ("sorry, but that's not right"). Counting apologies in a British conversation badly overstates the contrition.
+  <br>↳ *British English pragmatics*
+
+- [x] **18.** The present perfect trips up most learners because it links past to present: "I have lost my keys" means they are still lost. "I lost my keys" is a finished event — you may well have found them since.
+  <br>↳ *Cambridge Grammar of the English Language*
+
+- [x] **19.** "Used to" and "be used to" are unrelated. "I used to smoke" is a past habit now stopped. "I'm used to smoking" means it feels normal. The second takes -ing, the first a bare verb.
+  <br>↳ *Cambridge Dictionary, usage notes*
+
+- [x] **20.** English has no word for the day after tomorrow, though many languages do. Speakers manage with the phrase itself, or borrow *overmorrow*, an archaic word that never quite came back.
+  <br>↳ *Oxford English Dictionary, «overmorrow»*
+
+- [x] **21.** Stress changes the part of speech in dozens of English pairs: *REcord* the noun versus *reCORD* the verb, *PREsent* versus *preSENT*, *OBject* versus *obJECT*. The spelling never changes, so only listening reveals it.
+  <br>↳ *English phonology: initial-stress-derived nouns*
+
+- [x] **22.** "Do you mind…?" is answered backwards. "Do you mind if I sit here?" — "No, not at all" means yes, please do. Answering "yes" means you object, which is why the polite reply is usually a phrase rather than a bare word.
+  <br>↳ *English pragmatics; Cambridge Dictionary*
+
+- [x] **23.** Contractions are not casual sloppiness — they are the norm. Writing "I do not think so" instead of "I don't think so" sounds emphatic or cold, not more correct. Full forms are for stress and formal documents.
+  <br>↳ *English usage guides*
+
+- [x] **24.** The phrase "with all due respect" almost always precedes disrespect. Native speakers hear it as a warning, not a courtesy — much like "no offence, but".
+  <br>↳ *English pragmatics*
+
+- [x] **25.** English is unusual in placing adjectives before the noun and keeping them there. "The red big car" is wrong, "the big red car" is right, and no native speaker can explain why without being told the rule exists.
+  <br>↳ *Mark Forsyth, «The Elements of Eloquence»*
+
+- [x] **26.** "Shall" survives mainly in questions offering to do something: "Shall I open the window?" As a future marker it has almost vanished from speech, though legal English still uses it to impose obligations.
+  <br>↳ *Merriam-Webster; legal drafting conventions*
 
