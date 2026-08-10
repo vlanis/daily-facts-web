@@ -68,6 +68,19 @@ Defines which slots exist on which days.
 - Each slot definition has a `slot` name (display label, not required to be
   unique across the whole file, but should be unique *within* a single
   day's resolved slot list) and a `topics` array of one or more topic ids.
+- A slot definition may carry an optional `index`, which **pins** it to one
+  exact fact instead of drawing from the queue:
+  ```json
+  { "slot": "Свято", "topics": ["holidays"], "index": 20 }
+  ```
+  A pinned slot must name exactly one topic, and the index must be within
+  that topic's `facts` array. It exists for date-specific slots where the
+  fact has to match the calendar day — a holiday on its actual date, which a
+  positional cursor cannot express.
+- **A pinned draw never touches `progress.json`.** The fact is not part of
+  the read queue, so pinning cannot advance or reorder a cursor, and a missed
+  run cannot desync anything. This is only safe because `facts` is
+  append-only: an index, once assigned, refers to the same fact forever.
 - `dates` entries are **additive**: on a matching calendar date, these
   slots are generated *in addition to* that date's normal weekday slots,
   never in place of them.

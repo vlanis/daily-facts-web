@@ -102,7 +102,20 @@ function factsFor(topics, topicId) {
 // Resolves a single slot against the live in-memory progress state, mutating
 // progress for the drawn topic. Returns { resolved } or { unresolved: slotName }.
 function resolveSlot(slotDef, topics, progress, newlyCycled) {
-  const { slot, topics: topicIds } = slotDef;
+  const { slot, topics: topicIds, index: pinned } = slotDef;
+
+  // A pinned slot names one exact fact rather than drawing from the queue —
+  // used by date-specific slots, where the fact has to match the calendar day
+  // (a holiday on its actual date). It deliberately does NOT touch progress:
+  // the fact is not part of the read queue, so a pinned slot can never shift
+  // a cursor, and a missed run cannot desync anything. Safe because
+  // topics.json is append-only, which makes an index permanent.
+  if (pinned !== undefined) {
+    const topic = topicIds[0];
+    const fact = factsFor(topics, topic)[pinned];
+    if (fact === undefined) return { unresolved: slot };
+    return { resolved: { slot, topic, fact, repeat: false, pinned: true } };
+  }
 
   const nonEmpty = topicIds.filter((t) => factsFor(topics, t).length > 0);
   if (nonEmpty.length === 0) {

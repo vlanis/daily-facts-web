@@ -5,9 +5,7 @@
 
 **35 facts · 0 approved · 0 imported · target 20 · lang uk**
 
-> ⛔ **This topic is parked — do not approve.** Its facts are tied to calendar dates, which the generation engine cannot match. `review-apply.mjs` will refuse to approve anything here.
-
-> ℹ️ НЕ імпортувати. Лінії лишаються у статусі draft назавжди — прив'язка до дат потребує окремого рішення щодо schedule.json dates.
+> ℹ️ Кожен факт прив'язується до конкретної дати через schedule.json dates з полем index. Не потрапляє у звичайну чергу — cursor не рухається.
 
 Tick `- [ ]` → `- [x]` to approve. Unticking an approved fact sends it back to draft. Lines marked `[~]` are already imported and are locked.
 
