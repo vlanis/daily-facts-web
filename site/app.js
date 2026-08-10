@@ -32,10 +32,32 @@
     }
   }
 
-  // Bare URLs in fact text (e.g. a painting's image link) should be tappable.
-  // Everything is appended as text nodes or as an anchor whose href and label
-  // are set via properties, so fact content is never parsed as HTML.
+  // Fact text carries two bits of light markup: bare URLs (a painting's image
+  // link) and **bold** around a defined term (english_words, urban_dictionary).
+  // Both are rendered as real elements; everything else becomes a text node.
+  // Nothing is ever assigned to innerHTML, so markup inside a fact stays
+  // literal text and cannot become part of the page.
   var URL_RE = /https?:\/\/[^\s<>"']+/g;
+  var BOLD_RE = /\*\*([^*]+)\*\*/g;
+
+  // Appends plain text, promoting **…** to <strong> along the way.
+  function appendWithBold(el, str) {
+    var last = 0;
+    var m;
+    BOLD_RE.lastIndex = 0;
+    while ((m = BOLD_RE.exec(str)) !== null) {
+      if (m.index > last) {
+        el.appendChild(document.createTextNode(str.slice(last, m.index)));
+      }
+      var strong = document.createElement("strong");
+      strong.textContent = m[1];
+      el.appendChild(strong);
+      last = m.index + m[0].length;
+    }
+    if (last < str.length) {
+      el.appendChild(document.createTextNode(str.slice(last)));
+    }
+  }
 
   function appendFactText(el, text) {
     var str = String(text == null ? "" : text);
@@ -44,7 +66,7 @@
     URL_RE.lastIndex = 0;
     while ((m = URL_RE.exec(str)) !== null) {
       if (m.index > last) {
-        el.appendChild(document.createTextNode(str.slice(last, m.index)));
+        appendWithBold(el, str.slice(last, m.index));
       }
       // Don't swallow sentence punctuation that happens to follow the URL.
       var href = m[0].replace(/[.,;:!?)\]]+$/, "");
@@ -57,7 +79,7 @@
       last = m.index + href.length;
     }
     if (last < str.length) {
-      el.appendChild(document.createTextNode(str.slice(last)));
+      appendWithBold(el, str.slice(last));
     }
   }
 
