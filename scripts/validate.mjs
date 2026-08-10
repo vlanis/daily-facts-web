@@ -100,6 +100,29 @@ function checkSlotArray(slots, where) {
         );
       }
     }
+
+    // A pinned slot serves one exact fact by index instead of drawing from the
+    // queue. Check it hard: a bad index would otherwise surface only as a
+    // silently unresolved slot on the day it fires, which could be months away.
+    if ("index" in s) {
+      const i = s.index;
+      if (!Number.isInteger(i) || i < 0) {
+        err(`schedule.json: ${at} ("${s.slot}") has a non-integer/negative index`);
+      } else if (s.topics.length !== 1) {
+        err(
+          `schedule.json: ${at} ("${s.slot}") pins index ${i} but lists ` +
+            `${s.topics.length} topics — a pinned slot must name exactly one`,
+        );
+      } else {
+        const facts = topics?.[s.topics[0]]?.facts;
+        if (Array.isArray(facts) && i >= facts.length) {
+          err(
+            `schedule.json: ${at} ("${s.slot}") pins index ${i} but topic ` +
+              `"${s.topics[0]}" has only ${facts.length} fact(s)`,
+          );
+        }
+      }
+    }
   }
 }
 

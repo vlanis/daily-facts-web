@@ -45,6 +45,14 @@ same day, even if two slots share a topic.
 
 For each slot `{ slot, topics }`:
 
+0. **If the slot carries an `index`, it is pinned.** Serve
+   `topics[<the one topic>].facts[index]` directly and stop — no random
+   pick, no cursor read, and crucially **no cursor write**. If that index is
+   out of range, record the slot as unresolved rather than serving
+   `undefined`. Pinned slots exist for date-specific entries where the fact
+   must match the calendar day (see `specs/data-model.md`); because they stay
+   out of the read queue entirely, a missed run cannot desync them, and the
+   same fact is served every time that date comes round.
 1. **Filter to un-cycled topics.** From `topics`, build the subset where
    `progress[topic].cycled` is `false` (or the topic has no progress entry
    yet, which counts as not cycled).
