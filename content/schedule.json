@@ -1,76 +1,756 @@
 {
   "weekdays": {
     "monday": [
-      { "slot": "Fact for a kid", "topics": ["kids"] },
-      { "slot": "Literature", "topics": ["literature","literature_modern","literature_ua"] },
-      { "slot": "Popculture", "topics": ["popculture","popculture_modern"] },
-      { "slot": "Technology", "topics": ["technology"] },
-      { "slot": "Ukrainian Language", "topics": ["ukrainian_language"] },
-      { "slot": "Urban Dictionary", "topics": ["urban_dictionary"] },
-      { "slot": "Things", "topics": ["animals","gardening","cooking"] },
-      { "slot": "Cinema and other toons", "topics": ["cartoon","movie"] },
-      { "slot": "Phrase", "topics": ["phrase"] }
+      {
+        "slot": "Fact for a kid",
+        "topics": [
+          "kids"
+        ]
+      },
+      {
+        "slot": "Literature",
+        "topics": [
+          "literature",
+          "literature_modern",
+          "literature_ua"
+        ]
+      },
+      {
+        "slot": "Popculture",
+        "topics": [
+          "popculture",
+          "popculture_modern"
+        ]
+      },
+      {
+        "slot": "Technology",
+        "topics": [
+          "technology"
+        ]
+      },
+      {
+        "slot": "Ukrainian Language",
+        "topics": [
+          "ukrainian_language"
+        ]
+      },
+      {
+        "slot": "Urban Dictionary",
+        "topics": [
+          "urban_dictionary"
+        ]
+      },
+      {
+        "slot": "Things",
+        "topics": [
+          "animals",
+          "gardening",
+          "cooking"
+        ]
+      },
+      {
+        "slot": "Cinema and other toons",
+        "topics": [
+          "cartoon",
+          "movie"
+        ]
+      },
+      {
+        "slot": "Phrase",
+        "topics": [
+          "phrase"
+        ]
+      }
     ],
     "tuesday": [
-      { "slot": "Modern Literature", "topics": ["literature_modern"] },
-      { "slot": "English", "topics": ["english","english_words"] },
-      { "slot": "Legends", "topics": ["legends_ua","legends_urban","legends_world"] },
-      { "slot": "Space", "topics": ["space"] },
-      { "slot": "Useless Facts", "topics": ["useless_facts"] },
-      { "slot": "Medicine", "topics": ["medicine"] },
-      { "slot": "Words", "topics": ["ukrainian_words"] },
-      { "slot": "Japanese", "topics": ["japanese"] }
+      {
+        "slot": "Modern Literature",
+        "topics": [
+          "literature_modern"
+        ]
+      },
+      {
+        "slot": "English",
+        "topics": [
+          "english",
+          "english_words"
+        ]
+      },
+      {
+        "slot": "Legends",
+        "topics": [
+          "legends_ua",
+          "legends_urban",
+          "legends_world"
+        ]
+      },
+      {
+        "slot": "Space",
+        "topics": [
+          "space"
+        ]
+      },
+      {
+        "slot": "Useless Facts",
+        "topics": [
+          "useless_facts"
+        ]
+      },
+      {
+        "slot": "Medicine",
+        "topics": [
+          "medicine"
+        ]
+      },
+      {
+        "slot": "Words",
+        "topics": [
+          "ukrainian_words"
+        ]
+      },
+      {
+        "slot": "Japanese",
+        "topics": [
+          "japanese"
+        ]
+      }
     ],
     "wednesday": [
-      { "slot": "Fact for a kid", "topics": ["kids"] },
-      { "slot": "Urban Legends", "topics": ["legends_urban"] },
-      { "slot": "Technology", "topics": ["technology"] },
-      { "slot": "Ukrainian Language", "topics": ["ukrainian_language"] },
-      { "slot": "History", "topics": ["history_ancient","history_modern","history_ua"] },
-      { "slot": "Legends Japan", "topics": ["legends_japan"] },
-      { "slot": "Guinness World Records", "topics": ["guinness"] },
-      { "slot": "Predictions", "topics": ["predictions"] }
+      {
+        "slot": "Fact for a kid",
+        "topics": [
+          "kids"
+        ]
+      },
+      {
+        "slot": "Urban Legends",
+        "topics": [
+          "legends_urban"
+        ]
+      },
+      {
+        "slot": "Technology",
+        "topics": [
+          "technology"
+        ]
+      },
+      {
+        "slot": "Ukrainian Language",
+        "topics": [
+          "ukrainian_language"
+        ]
+      },
+      {
+        "slot": "History",
+        "topics": [
+          "history_ancient",
+          "history_modern",
+          "history_ua"
+        ]
+      },
+      {
+        "slot": "Legends Japan",
+        "topics": [
+          "legends_japan"
+        ]
+      },
+      {
+        "slot": "Guinness World Records",
+        "topics": [
+          "guinness"
+        ]
+      },
+      {
+        "slot": "Predictions",
+        "topics": [
+          "predictions"
+        ]
+      }
     ],
     "thursday": [
-      { "slot": "Literature", "topics": ["literature","literature_modern","literature_ua"] },
-      { "slot": "English", "topics": ["english","english_words"] },
-      { "slot": "Popculture", "topics": ["popculture","popculture_modern"] },
-      { "slot": "Space", "topics": ["space"] },
-      { "slot": "Medicine", "topics": ["medicine"] },
-      { "slot": "Urban Dictionary", "topics": ["urban_dictionary"] },
-      { "slot": "Things", "topics": ["animals","gardening","cooking"] }
+      {
+        "slot": "Literature",
+        "topics": [
+          "literature",
+          "literature_modern",
+          "literature_ua"
+        ]
+      },
+      {
+        "slot": "English",
+        "topics": [
+          "english",
+          "english_words"
+        ]
+      },
+      {
+        "slot": "Popculture",
+        "topics": [
+          "popculture",
+          "popculture_modern"
+        ]
+      },
+      {
+        "slot": "Space",
+        "topics": [
+          "space"
+        ]
+      },
+      {
+        "slot": "Medicine",
+        "topics": [
+          "medicine"
+        ]
+      },
+      {
+        "slot": "Urban Dictionary",
+        "topics": [
+          "urban_dictionary"
+        ]
+      },
+      {
+        "slot": "Things",
+        "topics": [
+          "animals",
+          "gardening",
+          "cooking"
+        ]
+      }
     ],
     "friday": [
-      { "slot": "Fact for a kid", "topics": ["kids"] },
-      { "slot": "Modern Literature", "topics": ["literature_modern"] },
-      { "slot": "Ukranian Legends", "topics": ["legends_ua"] },
-      { "slot": "Technology", "topics": ["technology"] },
-      { "slot": "Ukrainian Language", "topics": ["ukrainian_language"] },
-      { "slot": "Travel", "topics": ["travel"] },
-      { "slot": "Japanese", "topics": ["japanese"] },
-      { "slot": "Painting", "topics": ["painting"] }
+      {
+        "slot": "Fact for a kid",
+        "topics": [
+          "kids"
+        ]
+      },
+      {
+        "slot": "Modern Literature",
+        "topics": [
+          "literature_modern"
+        ]
+      },
+      {
+        "slot": "Ukranian Legends",
+        "topics": [
+          "legends_ua"
+        ]
+      },
+      {
+        "slot": "Technology",
+        "topics": [
+          "technology"
+        ]
+      },
+      {
+        "slot": "Ukrainian Language",
+        "topics": [
+          "ukrainian_language"
+        ]
+      },
+      {
+        "slot": "Travel",
+        "topics": [
+          "travel"
+        ]
+      },
+      {
+        "slot": "Japanese",
+        "topics": [
+          "japanese"
+        ]
+      },
+      {
+        "slot": "Painting",
+        "topics": [
+          "painting"
+        ]
+      }
     ],
     "saturday": [
-      { "slot": "English", "topics": ["english","english_words"] },
-      { "slot": "Legends", "topics": ["legends_ua","legends_urban","legends_world"] },
-      { "slot": "Ukranian Literature", "topics": ["literature_ua"] },
-      { "slot": "Popculture", "topics": ["popculture","popculture_modern"] },
-      { "slot": "Space", "topics": ["space"] },
-      { "slot": "Words", "topics": ["ukrainian_words"] },
-      { "slot": "Books", "topics": ["book_fiction","book_fantasy"] },
-      { "slot": "Stuff", "topics": ["cars","porn","ai","videogames"] }
+      {
+        "slot": "English",
+        "topics": [
+          "english",
+          "english_words"
+        ]
+      },
+      {
+        "slot": "Legends",
+        "topics": [
+          "legends_ua",
+          "legends_urban",
+          "legends_world"
+        ]
+      },
+      {
+        "slot": "Ukranian Literature",
+        "topics": [
+          "literature_ua"
+        ]
+      },
+      {
+        "slot": "Popculture",
+        "topics": [
+          "popculture",
+          "popculture_modern"
+        ]
+      },
+      {
+        "slot": "Space",
+        "topics": [
+          "space"
+        ]
+      },
+      {
+        "slot": "Words",
+        "topics": [
+          "ukrainian_words"
+        ]
+      },
+      {
+        "slot": "Books",
+        "topics": [
+          "book_fiction",
+          "book_fantasy"
+        ]
+      },
+      {
+        "slot": "Stuff",
+        "topics": [
+          "cars",
+          "porn",
+          "ai",
+          "videogames"
+        ]
+      }
     ],
     "sunday": [
-      { "slot": "Fact for a kid", "topics": ["kids"] },
-      { "slot": "English", "topics": ["english","english_words"] },
-      { "slot": "Useless Facts", "topics": ["useless_facts"] },
-      { "slot": "History", "topics": ["history_ancient","history_modern","history_ua"] },
-      { "slot": "Legends Japan", "topics": ["legends_japan"] },
-      { "slot": "Travel", "topics": ["travel"] },
-      { "slot": "Verse", "topics": ["verse"] },
-      { "slot": "Stuff", "topics": ["cars","porn","ai","videogames"] }
+      {
+        "slot": "Fact for a kid",
+        "topics": [
+          "kids"
+        ]
+      },
+      {
+        "slot": "English",
+        "topics": [
+          "english",
+          "english_words"
+        ]
+      },
+      {
+        "slot": "Useless Facts",
+        "topics": [
+          "useless_facts"
+        ]
+      },
+      {
+        "slot": "History",
+        "topics": [
+          "history_ancient",
+          "history_modern",
+          "history_ua"
+        ]
+      },
+      {
+        "slot": "Legends Japan",
+        "topics": [
+          "legends_japan"
+        ]
+      },
+      {
+        "slot": "Travel",
+        "topics": [
+          "travel"
+        ]
+      },
+      {
+        "slot": "Verse",
+        "topics": [
+          "verse"
+        ]
+      },
+      {
+        "slot": "Stuff",
+        "topics": [
+          "cars",
+          "porn",
+          "ai",
+          "videogames"
+        ]
+      }
     ]
   },
   "dates": {
+    "01-07": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 22
+      }
+    ],
+    "01-13": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 21
+      }
+    ],
+    "01-25": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 20
+      }
+    ],
+    "02-01": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 18
+      }
+    ],
+    "02-23": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 0
+      }
+    ],
+    "03-01": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 19
+      }
+    ],
+    "04-14": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 3
+      }
+    ],
+    "04-27": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 6
+      }
+    ],
+    "05-01": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 24
+      }
+    ],
+    "05-17": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 25
+      }
+    ],
+    "06-23": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 27
+      }
+    ],
+    "06-24": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 26
+      }
+    ],
+    "07-02": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 31
+      }
+    ],
+    "07-07": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 29
+      }
+    ],
+    "07-11": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 30
+      }
+    ],
+    "09-11": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 32
+      }
+    ],
+    "09-19": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 33
+      }
+    ],
+    "10-04": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 10
+      }
+    ],
+    "10-13": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 7
+      }
+    ],
+    "11-01": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 9
+      }
+    ],
+    "11-08": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 5
+      }
+    ],
+    "11-11": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 16
+      }
+    ],
+    "11-15": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 13
+      }
+    ],
+    "11-30": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 12
+      }
+    ],
+    "12-13": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 11
+      }
+    ],
+    "12-23": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 4
+      }
+    ],
+    "2026-05-25": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 23
+      }
+    ],
+    "2026-06-19": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 28
+      }
+    ],
+    "2026-08-26": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 1
+      }
+    ],
+    "2027-05-31": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 23
+      }
+    ],
+    "2027-06-25": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 28
+      }
+    ],
+    "2027-08-25": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 1
+      }
+    ],
+    "2028-05-29": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 23
+      }
+    ],
+    "2028-06-23": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 28
+      }
+    ],
+    "2028-08-30": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 1
+      }
+    ],
+    "2029-05-28": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 23
+      }
+    ],
+    "2029-06-22": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 28
+      }
+    ],
+    "2029-08-29": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 1
+      }
+    ],
+    "2030-05-27": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 23
+      }
+    ],
+    "2030-06-21": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 28
+      }
+    ],
+    "2030-08-28": [
+      {
+        "slot": "Свято",
+        "topics": [
+          "holidays"
+        ],
+        "index": 1
+      }
+    ]
   }
 }
