@@ -88,10 +88,18 @@ function pickUniform(arr) {
 
 // Resolves the ordered slot list for the day: weekday slots first, then any
 // additive date-specific slots.
+//
+// A `dates` key is either "MM-DD", which fires on that day every year, or
+// "YYYY-MM-DD", which fires once. Both are additive and both can match the
+// same day — the recurring entry carries an annual fixture like a holiday,
+// while the dated one covers a year-specific occasion or a festival whose
+// date moves (lunar calendars, "last Monday of May").
 function resolveSlotList(schedule, weekday, date) {
   const weekdaySlots = schedule.weekdays?.[weekday] ?? [];
-  const dateSlots = schedule.dates?.[date] ?? [];
-  return [...weekdaySlots, ...dateSlots];
+  const dates = schedule.dates ?? {};
+  const annualSlots = dates[date.slice(5)] ?? []; // "YYYY-MM-DD" -> "MM-DD"
+  const dateSlots = dates[date] ?? [];
+  return [...weekdaySlots, ...annualSlots, ...dateSlots];
 }
 
 function factsFor(topics, topicId) {

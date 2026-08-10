@@ -27,8 +27,11 @@ runs once per day, inside the GitHub Actions job described in
 1. Determine today's weekday name (e.g. `"monday"`) and full date
    (`YYYY-MM-DD"`) from the Kyiv-local date.
 2. Start with `schedule.json.weekdays[<weekday>]`.
-3. If `schedule.json.dates[<date>]` exists, append those slot definitions
-   to the list (additive — see `specs/data-model.md`).
+3. Append any matching `dates` entries (additive — see
+   `specs/data-model.md`). Two key forms are checked, recurring first:
+   `schedule.json.dates[<MM-DD>]`, which fires every year, then
+   `schedule.json.dates[<YYYY-MM-DD>]`, which fires once. Both may match
+   the same day.
 4. The result is an ordered list of `{ slot, topics }` pairs to resolve,
    in the order they appear (weekday slots first, then any date-specific
    ones).
