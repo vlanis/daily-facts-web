@@ -165,3 +165,58 @@ body {
     box-shadow: none;
   }
 }
+
+/* Decorative rushnyk band down the empty side gutters.
+   Shown from 64rem up, which is landscape iPad and wider — the content column
+   caps at 52rem, so that is the first width with gutters worth filling.
+   Narrower screens (iPhone, portrait iPad) have none and get nothing.
+   Fixed, so it stays put while the cards scroll past it.
+   It is painted as a *mask*, not an image: ornament.svg supplies only the
+   shape, and the colour comes from background-color, so the band follows
+   --accent through the light/dark themes with one asset instead of two.
+   The @supports guard matters — without mask support the background-color
+   alone would paint two solid accent bars down the page. */
+@supports (mask-image: url("ornament.svg")) or
+  (-webkit-mask-image: url("ornament.svg")) {
+  @media (min-width: 64rem) {
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 3.5rem;
+      pointer-events: none;
+      background-color: var(--accent);
+      opacity: 0.18;
+      -webkit-mask-image: url("ornament.svg");
+      mask-image: url("ornament.svg");
+      -webkit-mask-repeat: repeat-y;
+      mask-repeat: repeat-y;
+      -webkit-mask-position: center top;
+      mask-position: center top;
+      -webkit-mask-size: 3.5rem auto;
+      mask-size: 3.5rem auto;
+    }
+
+    /* Inset from the window edge so the band reads as a deliberate margin
+       rather than as something running off the screen. Inset plus width must
+       stay inside the gutter: at 64rem the gutter is 6rem, so 1.25 + 3.5
+       leaves 1.25rem of clearance before the cards. */
+    body::before {
+      left: 1.25rem;
+    }
+
+    body::after {
+      right: 1.25rem;
+    }
+
+    /* A fixed element paints above static content, so give the page its own
+       stacking context. The band cannot reach the cards at these widths, but
+       this means it still cannot if the column is ever widened. */
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
