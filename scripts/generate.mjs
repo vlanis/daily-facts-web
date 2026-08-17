@@ -122,7 +122,9 @@ function resolveSlot(slotDef, topics, progress, newlyCycled) {
     const topic = topicIds[0];
     const fact = factsFor(topics, topic)[pinned];
     if (fact === undefined) return { unresolved: slot };
-    return { resolved: { slot, topic, fact, repeat: false, pinned: true } };
+    return {
+      resolved: { slot, topic, fact, repeat: false, pinned: true, pool: 1 },
+    };
   }
 
   const nonEmpty = topicIds.filter((t) => factsFor(topics, t).length > 0);
@@ -163,7 +165,11 @@ function resolveSlot(slotDef, topics, progress, newlyCycled) {
   }
   progress[topic] = { next_index: nextIndex, cycled };
 
-  return { resolved: { slot, topic, fact, repeat } };
+  // `pool` is how many topics the slot was configured to choose between, not
+  // how many were viable today. The UI shows the drawn topic only when the pool
+  // is larger than one, i.e. only when knowing the source tells the reader
+  // something the slot name didn't already.
+  return { resolved: { slot, topic, fact, repeat, pool: topicIds.length } };
 }
 
 function generate({ date, weekday, topics, schedule, progress }) {

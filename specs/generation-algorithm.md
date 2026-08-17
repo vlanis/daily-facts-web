@@ -82,8 +82,11 @@ For each slot `{ slot, topics }`:
      — cycling is sticky until manually reset).
    - Write these back into the in-memory progress state immediately, so
      subsequent slots in the same run see the update.
-5. **Record the result:** `{ slot, topic, fact, repeat }` appended to
-   today's output.
+5. **Record the result:** `{ slot, topic, fact, repeat, pool }` appended to
+   today's output, where `pool` is the number of topics the slot listed in
+   `schedule.json` (not the filtered count from step 1 — it describes how
+   the slot was configured, not what survived filtering). A pinned slot
+   reports `pool: 1`. See `specs/data-model.md`.
 
 ## Step 3: Write outputs
 
