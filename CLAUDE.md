@@ -53,10 +53,12 @@ thing that ever mutates state.
   drafts/<topic>.jsonl  # mutable staging area for collected facts
 /site/
   index.html / app.js / today.json  # static reader
+  ornament.svg                       # decorative gutter band, used as a CSS mask
   archive/YYYY-MM-DD.json            # optional per-day history
 /scripts/
   generate.*        # daily generation logic, run by the workflow
   import-drafts.mjs  # promotes approved drafts into topics.json (append-only)
+  gen-ornament.mjs   # regenerates site/ornament.svg from a character grid
 /.github/workflows/
   daily-generate.yml
 CLAUDE.md
