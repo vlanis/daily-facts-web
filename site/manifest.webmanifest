@@ -4,8 +4,8 @@
   "description": "A curated set of interesting facts, every day.",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#f6f4ef",
-  "theme_color": "#f6f4ef",
+  "background_color": "#eef2f7",
+  "theme_color": "#eef2f7",
   "icons": [
     {
       "src": "icon.svg",
