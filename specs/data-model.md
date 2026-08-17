@@ -131,14 +131,21 @@ This is the **only** file the static site reads at runtime.
 {
   "date": "2026-08-02",
   "slots": [
-    { "slot": "Literature", "topic": "literature", "fact": "...", "repeat": false },
-    { "slot": "Other", "topic": "space", "fact": "...", "repeat": false }
+    { "slot": "Literature", "topic": "literature", "fact": "...", "repeat": false, "pool": 1 },
+    { "slot": "Other", "topic": "space", "fact": "...", "repeat": false, "pool": 5 }
   ]
 }
 ```
 
 `repeat: true` marks a draw that happened after every topic in that slot's
 list had already cycled (see `specs/generation-algorithm.md`).
+
+`pool` is how many topics the slot was **configured** to choose between —
+`schedule.json`'s `topics` length — not how many were viable on the day.
+The UI uses it to decide whether naming the drawn topic tells the reader
+anything (see `specs/ui.md`); a pinned slot always reports `1`. It is
+written by the generation job and is informational only: nothing reads it
+back, so archived files predating the field stay valid.
 
 ### `site/archive/YYYY-MM-DD.json`
 

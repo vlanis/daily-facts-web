@@ -83,6 +83,67 @@
     }
   }
 
+  // Reader-facing labels for topic ids. Ids are lowercase/underscored by
+  // construction (validate.mjs enforces it), which is fine for data but not for
+  // a heading. A topic missing from this map falls back to a prettified id, so
+  // adding a topic never breaks the page — it just reads a little plainer until
+  // it gets an entry here.
+  var TOPIC_NAMES = {
+    ai: "AI",
+    animals: "Animals",
+    book_fantasy: "Fantasy Books",
+    book_fiction: "Fiction Books",
+    cars: "Cars",
+    cartoon: "Cartoons",
+    cooking: "Cooking",
+    english: "English",
+    english_words: "English Words",
+    gardening: "Gardening",
+    guinness: "Guinness World Records",
+    history_ancient: "Ancient History",
+    history_modern: "Modern History",
+    history_ua: "Ukrainian History",
+    holidays: "Holidays",
+    japanese: "Japanese",
+    kids: "Kids",
+    legends_japan: "Japanese Legends",
+    legends_ua: "Ukrainian Legends",
+    legends_urban: "Urban Legends",
+    legends_world: "World Legends",
+    literature: "Literature",
+    literature_modern: "Modern Literature",
+    literature_ua: "Ukrainian Literature",
+    medicine: "Medicine",
+    movie: "Movies",
+    painting: "Painting",
+    phrase: "Phrases",
+    popculture: "Popculture",
+    popculture_modern: "Modern Popculture",
+    porn: "Adult Industry",
+    predictions: "Predictions",
+    space: "Space",
+    technology: "Technology",
+    travel: "Travel",
+    ukrainian_language: "Ukrainian Language",
+    ukrainian_words: "Ukrainian Words",
+    urban_dictionary: "Urban Dictionary",
+    useless_facts: "Useless Facts",
+    verse: "Verse",
+    videogames: "Video Games",
+  };
+
+  function topicLabel(id) {
+    if (Object.prototype.hasOwnProperty.call(TOPIC_NAMES, id)) {
+      return TOPIC_NAMES[id];
+    }
+    return String(id || "")
+      .split("_")
+      .map(function (w) {
+        return w ? w.charAt(0).toUpperCase() + w.slice(1) : w;
+      })
+      .join(" ");
+  }
+
   function renderSlots(slots) {
     var frag = document.createDocumentFragment();
     slots.forEach(function (slot) {
@@ -93,12 +154,27 @@
       name.className = "slot-name";
       name.textContent = slot.slot;
 
+      // Name the source topic only for slots that drew from a pool of several,
+      // where it says something the slot name didn't. A single-topic slot would
+      // just repeat itself ("Technology — Technology"). The label check catches
+      // the same repetition from the other direction: a multi-topic slot can
+      // still draw the topic it is named after ("Literature" drawing
+      // `literature` out of a pool of three). Older today.json files predate
+      // `pool` and simply don't get the suffix.
+      var label = slot.topic ? topicLabel(slot.topic) : "";
+      if (slot.pool > 1 && label && label !== slot.slot) {
+        var topic = document.createElement("span");
+        topic.className = "slot-topic";
+        topic.textContent = " — " + label;
+        name.appendChild(topic);
+      }
+
       var fact = document.createElement("p");
       fact.className = "fact";
       appendFactText(fact, slot.fact);
 
-      // Note: `repeat` and `topic` are operational metadata and are
-      // intentionally not shown to the reader (see specs/ui.md).
+      // Note: `repeat` is operational metadata and is intentionally not shown
+      // to the reader (see specs/ui.md).
       card.appendChild(name);
       card.appendChild(fact);
       frag.appendChild(card);

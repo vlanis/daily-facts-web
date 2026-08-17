@@ -25,11 +25,21 @@ fetched by the client at runtime.
 - Render each entry in `slots` as a card/section:
   - Slot name (e.g. "Literature") as a small label/heading.
   - The fact text as the primary content.
-  - Do **not** display the `repeat` flag or `topic` id to the reader by
-    default — those are operational metadata, not reading content. (Fine
-    to expose `topic` subtly, e.g. a small tag, if it adds to the
-    reading experience — owner's call during implementation, not a hard
-    requirement.)
+  - The source topic is shown appended to the slot name — "Things —
+    Animals" — but **only when it adds information**, which the owner's
+    call resolved to two conditions, both required:
+    - `pool > 1`, i.e. the slot chose between several topics. A
+      single-topic slot would only restate itself ("Technology —
+      Technology").
+    - The topic's display label differs from the slot name. A multi-topic
+      slot can still draw the topic it is named after — slot "Literature"
+      drawing `literature` out of a pool of three — which is the same
+      repetition arriving from the other direction.
+    Topic ids are lowercase/underscored and unfit for a heading, so the
+    UI maps them to display labels, falling back to a prettified id for
+    any topic not in the map. Roughly a fifth of cards carry the suffix.
+  - Do **not** display the `repeat` flag — that is operational metadata,
+    not reading content.
 - If `unresolved` is present and non-empty, this is operational
   information for the owner, not something to show the reader prominently
   — omit from the default view, or show only in a hidden/owner-only debug

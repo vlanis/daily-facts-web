@@ -81,6 +81,14 @@ body {
   font-weight: 600;
 }
 
+/* The source topic, shown only for multi-topic slots. Subordinate to the slot
+   name: same size and tracking, but lighter and in the accent tone so the eye
+   still lands on the slot first. */
+.card .slot-name .slot-topic {
+  font-weight: 400;
+  color: var(--accent);
+}
+
 .card .fact {
   margin: 0;
   font-size: 1.15rem;
