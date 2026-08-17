@@ -32,26 +32,31 @@
     }
   }
 
-  // Fact text carries two bits of light markup: bare URLs (a painting's image
-  // link) and **bold** around a defined term (english_words, urban_dictionary).
-  // Both are rendered as real elements; everything else becomes a text node.
-  // Nothing is ever assigned to innerHTML, so markup inside a fact stays
-  // literal text and cannot become part of the page.
+  // Fact text carries three bits of light markup: bare URLs (a painting's image
+  // link), **bold** around a defined term, and *italics* around a usage example
+  // (english, english_words, urban_dictionary). All are rendered as real
+  // elements; everything else becomes a text node. Nothing is ever assigned to
+  // innerHTML, so markup inside a fact stays literal text and cannot become
+  // part of the page.
   var URL_RE = /https?:\/\/[^\s<>"']+/g;
-  var BOLD_RE = /\*\*([^*]+)\*\*/g;
+  var EMPHASIS_RE = /\*\*([^*]+)\*\*|\*([^*]+)\*/g;
 
-  // Appends plain text, promoting **…** to <strong> along the way.
-  function appendWithBold(el, str) {
+  // Appends plain text, promoting **…** to <strong> and *…* to <em>. The bold
+  // branch is listed first so it wins at any given position — otherwise the
+  // opening ** of a bold run would match as an italic with an empty body. An
+  // unpaired asterisk matches neither branch and stays literal.
+  function appendWithEmphasis(el, str) {
     var last = 0;
     var m;
-    BOLD_RE.lastIndex = 0;
-    while ((m = BOLD_RE.exec(str)) !== null) {
+    EMPHASIS_RE.lastIndex = 0;
+    while ((m = EMPHASIS_RE.exec(str)) !== null) {
       if (m.index > last) {
         el.appendChild(document.createTextNode(str.slice(last, m.index)));
       }
-      var strong = document.createElement("strong");
-      strong.textContent = m[1];
-      el.appendChild(strong);
+      var bold = m[1] !== undefined;
+      var node = document.createElement(bold ? "strong" : "em");
+      node.textContent = bold ? m[1] : m[2];
+      el.appendChild(node);
       last = m.index + m[0].length;
     }
     if (last < str.length) {
@@ -66,7 +71,7 @@
     URL_RE.lastIndex = 0;
     while ((m = URL_RE.exec(str)) !== null) {
       if (m.index > last) {
-        appendWithBold(el, str.slice(last, m.index));
+        appendWithEmphasis(el, str.slice(last, m.index));
       }
       // Don't swallow sentence punctuation that happens to follow the URL.
       var href = m[0].replace(/[.,;:!?)\]]+$/, "");
@@ -79,7 +84,7 @@
       last = m.index + href.length;
     }
     if (last < str.length) {
-      appendWithBold(el, str.slice(last));
+      appendWithEmphasis(el, str.slice(last));
     }
   }
 

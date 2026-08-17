@@ -47,6 +47,34 @@ fetched by the client at runtime.
 - If `slots` is empty (a day with nothing scheduled), show a simple,
   unobtrusive empty state rather than a blank page.
 
+## Markup allowed inside a fact
+
+Fact text is plain text carrying three pieces of light markup, and no
+others. This is a content-authoring contract as much as a rendering rule:
+anything else an author writes appears verbatim.
+
+| Written in the fact | Renders as | Used by |
+| --- | --- | --- |
+| `**term**` | `<strong>` | `english_words`, `urban_dictionary` |
+| `*example*` | `<em>` | `english`, `english_words`, `urban_dictionary` |
+| a bare `https://…` URL | `<a target="_blank" rel="noopener noreferrer">` | `painting` and other link-carrying topics |
+
+Rules that keep this safe and predictable:
+
+- **Nothing is ever assigned to `innerHTML`.** Elements are built with
+  `createElement` and filled with `textContent`, so HTML written inside a
+  fact — `<b>x</b>` — stays literal text and can never become part of the
+  page. Any future markup must preserve this.
+- **Bold is matched before italics**, otherwise the opening `**` of a bold
+  run matches as an italic with an empty body.
+- **An unpaired asterisk stays literal.** No attempt is made to guess.
+- Trailing sentence punctuation is trimmed off a URL so a link at the end
+  of a sentence doesn't swallow the full stop.
+
+Adding a fourth kind of markup means updating the renderer *and* this
+table; markup that renders in one topic but not another is the bug this
+section exists to prevent.
+
 ## Non-goals for the core screen
 
 - No "mark as read" interaction (see `specs/data-model.md` — deferred).
