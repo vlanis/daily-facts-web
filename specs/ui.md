@@ -118,6 +118,22 @@ step (bundler, framework) is not precluded if preferred, but should be
 treated as a deliberate choice, not a default, given the actual
 complexity of what's being rendered.
 
+### Asset cache busting
+
+`index.html` references `styles.css?v=N` and `app.js?v=N`. **Bump `N` in
+both whenever either file changes.** There is no build step to hash
+filenames automatically, so the query string is the only thing that tells
+a browser the asset is new.
+
+This matters because the two halves of the page cache very differently.
+`today.json` is fetched with a timestamp and `cache: "no-store"`, so the
+day's content is always current — but the code rendering it is served by
+GitHub Pages with `max-age=600`, and an iOS home-screen shortcut holds it
+longer still. Forgetting the bump therefore produces the confusing case
+of fresh facts rendered by stale code, which looks like the fix never
+deployed. `index.html` itself needs no marker: it is the document being
+requested, so it revalidates on its own.
+
 ## Error handling
 
 If `today.json` fails to load or is malformed (e.g. the daily job hasn't
