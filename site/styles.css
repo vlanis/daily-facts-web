@@ -1,10 +1,10 @@
 :root {
-  --bg: #f6f4ef;
+  --bg: #eef2f7;
   --card: #ffffff;
-  --ink: #2b2a26;
-  --ink-soft: #6f6b62;
-  --accent: #b4794b;
-  --line: #e7e2d8;
+  --ink: #1e2733;
+  --ink-soft: #5f6b7a;
+  --accent: #3a6ea5;
+  --line: #dbe3ec;
   --radius: 16px;
   --maxw: 34rem;
 }
@@ -68,7 +68,7 @@ body {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 1.15rem 1.25rem 1.3rem;
-  box-shadow: 0 1px 2px rgba(43, 42, 38, 0.04);
+  box-shadow: 0 1px 2px rgba(30, 39, 51, 0.05);
   min-width: 0;
 }
 
@@ -154,12 +154,12 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1b1a17;
-    --card: #26241f;
-    --ink: #ece8df;
-    --ink-soft: #a8a294;
-    --accent: #d29a68;
-    --line: #37342c;
+    --bg: #14181f;
+    --card: #1c222c;
+    --ink: #e2e8f0;
+    --ink-soft: #94a3b8;
+    --accent: #6fa8dc;
+    --line: #2a323e;
   }
   .card {
     box-shadow: none;
