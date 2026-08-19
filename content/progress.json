@@ -1,1 +1,34 @@
-{}
+{
+  "kids": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "legends_urban": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "technology": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "ukrainian_language": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "history_ua": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "legends_japan": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "guinness": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "predictions": {
+    "next_index": 1,
+    "cycled": false
+  }
+}
