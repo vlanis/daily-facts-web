@@ -1,18 +1,18 @@
 {
   "kids": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "legends_urban": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "technology": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "ukrainian_language": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "history_ua": {
@@ -20,14 +20,18 @@
     "cycled": false
   },
   "legends_japan": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "guinness": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "predictions": {
+    "next_index": 2,
+    "cycled": false
+  },
+  "history_modern": {
     "next_index": 1,
     "cycled": false
   }
