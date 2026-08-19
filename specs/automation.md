@@ -6,6 +6,33 @@ Defines the scheduled job that runs the generation algorithm daily, how
 "today's date" is determined, how results are committed, and how cycle
 alerts are surfaced. This is the only automated write path in the system.
 
+## Branches
+
+`main` is production. It is the repository's **default branch**, which is
+what makes the daily job work at all: GitHub only runs `schedule:`
+triggers on the default branch, so whichever branch is default is the one
+that generates facts. `deploy-pages.yml` also publishes from `main`.
+
+`develop` is the working branch. Content and code changes are made there
+and merged into `main` to release.
+
+**The sync is two-way, and that is the part worth remembering.** The daily
+job commits `progress.json`, `today.json` and a new archive entry straight
+to `main` every night, so `main` moves ahead on its own without anyone
+touching it. Consequences:
+
+- Before starting work on `develop`, merge `main` into it. Otherwise the
+  release merge conflicts on `progress.json`, which both sides will have
+  changed.
+- Never resolve such a conflict by taking `develop`'s copy of
+  `progress.json`. `main`'s is the live cursor state; overwriting it
+  re-serves facts that were already published. See `specs/data-model.md`.
+- A release is `develop` -> `main`. Pull `main` first; the push will be
+  rejected otherwise, since the bot has almost certainly moved it.
+
+`validate-content.yml` runs on pull requests, so a `develop` -> `main` PR
+is checked before it can break a night's generation.
+
 ## Workflow trigger
 
 A single daily `schedule` cron trigger, approximating midnight in
