@@ -38,6 +38,12 @@ Primary content maintainer: the project owner, editing content via the repo.
   static `today.json` (and an archive log entry), and commits the result.
 - **Site:** a purely static page that reads `today.json` at load time.
   No client-side write-backs, no auth, no backend calls of any kind.
+- **Branches:** `main` is production and the default branch — GitHub runs
+  `schedule:` triggers only on the default branch, so that is what makes
+  the daily job fire. `develop` is the working branch. The bot commits to
+  `main` nightly, so merge `main` into `develop` before working, and never
+  resolve a `progress.json` conflict in `develop`'s favour. See
+  `specs/automation.md`.
 
 This split means the site itself is trivial and can't break the data; all
 the interesting logic lives in the daily generation job, which is the only

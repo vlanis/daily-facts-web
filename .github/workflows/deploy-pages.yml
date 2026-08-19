@@ -6,7 +6,7 @@ name: Deploy Pages
 
 on:
   push:
-    branches: [develop]
+    branches: [main]
     paths:
       - "site/**"
   workflow_run:
