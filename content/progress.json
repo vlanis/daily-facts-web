@@ -1,1 +1,34 @@
-{}
+{
+  "literature_modern": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "english": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "legends_ua": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "space": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "useless_facts": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "medicine": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "ukrainian_words": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "japanese": {
+    "next_index": 1,
+    "cycled": false
+  }
+}
