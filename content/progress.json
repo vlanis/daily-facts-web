@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "useless_facts": {
@@ -20,7 +20,7 @@
     "cycled": false
   },
   "medicine": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "ukrainian_words": {
@@ -60,6 +60,26 @@
     "cycled": false
   },
   "predictions": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "literature_ua": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "english_words": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "popculture_modern": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "urban_dictionary": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "animals": {
     "next_index": 1,
     "cycled": false
   }
