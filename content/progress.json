@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 2,
+    "next_index": 3,
     "cycled": false
   },
   "useless_facts": {
@@ -24,7 +24,7 @@
     "cycled": false
   },
   "ukrainian_words": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "japanese": {
@@ -64,11 +64,11 @@
     "cycled": false
   },
   "literature_ua": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "english_words": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "popculture_modern": {
@@ -88,6 +88,22 @@
     "cycled": false
   },
   "painting": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "legends_world": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "popculture": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "book_fantasy": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "ai": {
     "next_index": 1,
     "cycled": false
   }
