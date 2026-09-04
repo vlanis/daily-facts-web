@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 5,
+    "next_index": 6,
     "cycled": false
   },
   "useless_facts": {
@@ -24,7 +24,7 @@
     "cycled": false
   },
   "ukrainian_words": {
-    "next_index": 3,
+    "next_index": 4,
     "cycled": false
   },
   "japanese": {
@@ -36,7 +36,7 @@
     "cycled": false
   },
   "legends_urban": {
-    "next_index": 2,
+    "next_index": 3,
     "cycled": false
   },
   "technology": {
@@ -64,15 +64,15 @@
     "cycled": false
   },
   "literature_ua": {
-    "next_index": 4,
+    "next_index": 5,
     "cycled": false
   },
   "english_words": {
-    "next_index": 2,
+    "next_index": 3,
     "cycled": false
   },
   "popculture_modern": {
-    "next_index": 1,
+    "next_index": 2,
     "cycled": false
   },
   "urban_dictionary": {
@@ -104,7 +104,7 @@
     "cycled": false
   },
   "ai": {
-    "next_index": 2,
+    "next_index": 3,
     "cycled": false
   },
   "verse": {
@@ -124,6 +124,10 @@
     "cycled": false
   },
   "cooking": {
+    "next_index": 1,
+    "cycled": false
+  },
+  "book_fiction": {
     "next_index": 1,
     "cycled": false
   }
