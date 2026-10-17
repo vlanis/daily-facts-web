@@ -16,7 +16,7 @@
     "cycled": false
   },
   "useless_facts": {
-    "next_index": 15,
+    "next_index": 16,
     "cycled": false
   },
   "medicine": {
@@ -32,7 +32,7 @@
     "cycled": false
   },
   "kids": {
-    "next_index": 30,
+    "next_index": 31,
     "cycled": false
   },
   "legends_urban": {
@@ -48,11 +48,11 @@
     "cycled": false
   },
   "history_ua": {
-    "next_index": 8,
+    "next_index": 9,
     "cycled": false
   },
   "legends_japan": {
-    "next_index": 15,
+    "next_index": 16,
     "cycled": false
   },
   "guinness": {
@@ -68,7 +68,7 @@
     "cycled": false
   },
   "english_words": {
-    "next_index": 21,
+    "next_index": 22,
     "cycled": false
   },
   "popculture_modern": {
@@ -84,7 +84,7 @@
     "cycled": false
   },
   "travel": {
-    "next_index": 15,
+    "next_index": 16,
     "cycled": false
   },
   "painting": {
@@ -108,7 +108,7 @@
     "cycled": false
   },
   "verse": {
-    "next_index": 7,
+    "next_index": 8,
     "cycled": false
   },
   "gardening": {
@@ -153,6 +153,10 @@
   },
   "porn": {
     "next_index": 5,
+    "cycled": false
+  },
+  "cars": {
+    "next_index": 1,
     "cycled": false
   }
 }
