@@ -4,7 +4,7 @@
     "cycled": false
   },
   "english": {
-    "next_index": 13,
+    "next_index": 14,
     "cycled": false
   },
   "legends_ua": {
@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 28,
+    "next_index": 29,
     "cycled": false
   },
   "useless_facts": {
@@ -20,7 +20,7 @@
     "cycled": false
   },
   "medicine": {
-    "next_index": 19,
+    "next_index": 20,
     "cycled": false
   },
   "ukrainian_words": {
@@ -64,7 +64,7 @@
     "cycled": false
   },
   "literature_ua": {
-    "next_index": 16,
+    "next_index": 17,
     "cycled": false
   },
   "english_words": {
@@ -76,7 +76,7 @@
     "cycled": false
   },
   "urban_dictionary": {
-    "next_index": 18,
+    "next_index": 19,
     "cycled": false
   },
   "animals": {
@@ -96,7 +96,7 @@
     "cycled": false
   },
   "popculture": {
-    "next_index": 15,
+    "next_index": 16,
     "cycled": false
   },
   "book_fantasy": {
@@ -124,7 +124,7 @@
     "cycled": false
   },
   "cooking": {
-    "next_index": 7,
+    "next_index": 8,
     "cycled": false
   },
   "book_fiction": {
