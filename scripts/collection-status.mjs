@@ -147,7 +147,7 @@ function main() {
 
   for (const [topic, def] of Object.entries(topics)) {
     const c = countDraft(topic);
-    const target = def.wave_q1 ?? 0;
+    const target = def[manifest.current_wave ?? "wave_q1"] ?? 0;
     const remaining = Math.max(0, target - c.total);
 
     totalDrafted += c.total;

@@ -8,55 +8,64 @@
     "Числа, що змінюються з часом (наклади, кількість перекладів, рекорди), подавати з прив'язкою на кшталт «станом на 2020-ті», щоб факт не застарів на сайті.",
     "Сумнівні або апокрифічні історії або не брати, або подавати чесно — як легенду, що не підтверджена джерелами."
   ],
+  "current_wave": "wave_q2",
+  "wave_q2_comment": "wave_q2 is CUMULATIVE (total draft lines incl. imported). Sized 2026-11-04 by simulating generate.mjs forward to 2027-02-25 (first wave runs dry ~2026-11-24) with padded topics, max draws over 5 runs minus remaining unread. english_words and history_ua are cycled (cursor wrapped to 0), so appends would sit behind re-serves; their pool partners carry the load instead and they get no new facts.",
   "topics": {
     "literature": {
       "band": "very often",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Світова література, що передує 2000 року: твори, автори, історії створення."
+      "brief": "Світова література, що передує 2000 року: твори, автори, історії створення.",
+      "wave_q2": 52
     },
     "literature_modern": {
       "band": "very often",
       "draws_per_week": 2.67,
       "wave_q1": 35,
       "lang": "uk",
-      "brief": "Світова література від 2000 року: твори, автори, премії, видавнича справа."
+      "brief": "Світова література від 2000 року: твори, автори, премії, видавнича справа.",
+      "wave_q2": 71
     },
     "literature_ua": {
       "band": "often",
       "draws_per_week": 1.67,
       "wave_q1": 22,
       "lang": "uk",
-      "brief": "Українська література: автори, твори, історії, забуті постаті."
+      "brief": "Українська література: автори, твори, історії, забуті постаті.",
+      "wave_q2": 50
     },
     "space": {
       "band": "often",
       "draws_per_week": 3,
       "wave_q1": 39,
       "lang": "uk",
-      "brief": "Космос і астрономія: цікаві наукові факти."
+      "brief": "Космос і астрономія: цікаві наукові факти.",
+      "wave_q2": 79
     },
     "technology": {
       "band": "often",
       "draws_per_week": 3,
       "wave_q1": 39,
       "lang": "uk",
-      "brief": "Технології з різних сфер упродовж усієї історії людства."
+      "brief": "Технології з різних сфер упродовж усієї історії людства.",
+      "wave_q2": 79
     },
     "popculture": {
       "band": "often",
       "draws_per_week": 1.5,
       "wave_q1": 20,
       "lang": "uk",
-      "brief": "Світова попкультура 1900–2000: музика, кіно, телебачення, мода, явища."
+      "brief": "Світова попкультура 1900–2000: музика, кіно, телебачення, мода, явища.",
+      "wave_q2": 47
     },
     "popculture_modern": {
       "band": "often",
       "draws_per_week": 1.5,
       "wave_q1": 20,
       "lang": "uk",
-      "brief": "Світова попкультура від 2000 року."
+      "brief": "Світова попкультура від 2000 року.",
+      "wave_q2": 38
     },
     "english": {
       "band": "often",
@@ -64,14 +73,16 @@
       "wave_q1": 26,
       "lang": "en",
       "brief": "English phrases and usage advice pitched at Upper-Intermediate, plus linguistic facts and history of the language.",
-      "constraint": "Written in English, not Ukrainian — the one exception to the Ukrainian default."
+      "constraint": "Written in English, not Ukrainian — the one exception to the Ukrainian default.",
+      "wave_q2": 79
     },
     "ukrainian_language": {
       "band": "often",
       "draws_per_week": 3,
       "wave_q1": 39,
       "lang": "uk",
-      "brief": "Історія розвитку української мови, цікаві факти, рідковживані слова та фрази — особливо нетипові для центральної України."
+      "brief": "Історія розвитку української мови, цікаві факти, рідковживані слова та фрази — особливо нетипові для центральної України.",
+      "wave_q2": 79
     },
     "medicine": {
       "band": "moderate",
@@ -79,42 +90,48 @@
       "wave_q1": 26,
       "lang": "uk",
       "brief": "Медицина та біологія: тіло людини, історія медицини, фізіологія.",
-      "constraint": "Факти, а не поради щодо здоров'я. Нічого, що можна прочитати як медичну рекомендацію."
+      "constraint": "Факти, а не поради щодо здоров'я. Нічого, що можна прочитати як медичну рекомендацію.",
+      "wave_q2": 53
     },
     "travel": {
       "band": "moderate",
       "draws_per_week": 2,
       "wave_q1": 26,
       "lang": "uk",
-      "brief": "Географія та цікаві місця, які варто побачити."
+      "brief": "Географія та цікаві місця, які варто побачити.",
+      "wave_q2": 52
     },
     "history_ancient": {
       "band": "moderate",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Давня історія."
+      "brief": "Давня історія.",
+      "wave_q2": 23
     },
     "history_modern": {
       "band": "moderate",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Новітня історія."
+      "brief": "Новітня історія.",
+      "wave_q2": 22
     },
     "history_ua": {
       "band": "moderate",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Історія України."
+      "brief": "Історія України.",
+      "wave_q2": 13
     },
     "gardening": {
       "band": "not often",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Життя рослин, а також поради для тих, хто має садівництво за хобі."
+      "brief": "Життя рослин, а також поради для тих, хто має садівництво за хобі.",
+      "wave_q2": 18
     },
     "japanese": {
       "band": "not often",
@@ -122,14 +139,16 @@
       "wave_q1": 26,
       "lang": "uk",
       "brief": "Японська мова для початківця, з ухилом в історію та цікаві факти.",
-      "constraint": "Текст українською; японські слова подавати з транслітерацією та перекладом."
+      "constraint": "Текст українською; японські слова подавати з транслітерацією та перекладом.",
+      "wave_q2": 53
     },
     "animals": {
       "band": "not often",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Тварини — і дикі, і свійські."
+      "brief": "Тварини — і дикі, і свійські.",
+      "wave_q2": 20
     },
     "guinness": {
       "band": "not often",
@@ -137,35 +156,40 @@
       "wave_q1": 13,
       "lang": "uk",
       "brief": "Рекорди та досягнення з Книги рекордів Гіннеса.",
-      "constraint": "У межах кожної хвилі додавати від найновіших до найдавніших."
+      "constraint": "У межах кожної хвилі додавати від найновіших до найдавніших.",
+      "wave_q2": 27
     },
     "ai": {
       "band": "occasionally",
       "draws_per_week": 0.5,
       "wave_q1": 7,
       "lang": "uk",
-      "brief": "Штучний інтелект."
+      "brief": "Штучний інтелект.",
+      "wave_q2": 20
     },
     "cooking": {
       "band": "occasionally",
       "draws_per_week": 0.67,
       "wave_q1": 9,
       "lang": "uk",
-      "brief": "Цікаві факти про кулінарію або короткі, прості та негенеричні рецепти."
+      "brief": "Цікаві факти про кулінарію або короткі, прості та негенеричні рецепти.",
+      "wave_q2": 22
     },
     "cars": {
       "band": "occasionally",
       "draws_per_week": 0.5,
       "wave_q1": 7,
       "lang": "uk",
-      "brief": "Автомобілі — для того, хто не є автолюбителем."
+      "brief": "Автомобілі — для того, хто не є автолюбителем.",
+      "wave_q2": 12
     },
     "videogames": {
       "band": "occasionally",
       "draws_per_week": 0.5,
       "wave_q1": 7,
       "lang": "uk",
-      "brief": "Відеоігри для того, хто в них не грає: дослідження, рекорди, технології, вплив на культуру та мистецтво."
+      "brief": "Відеоігри для того, хто в них не грає: дослідження, рекорди, технології, вплив на культуру та мистецтво.",
+      "wave_q2": 16
     },
     "porn": {
       "band": "occasionally",
@@ -173,7 +197,8 @@
       "wave_q1": 7,
       "lang": "uk",
       "brief": "Індустрія для дорослих очима стороннього: дослідження, рекорди, вплив на технології, право та культуру.",
-      "constraint": "Дозволено відверту тематику й прямі формулювання — сайт для дорослих. Але це все одно факти: дослідження, рекорди, історія індустрії, анатомія, право й культура. Без еротичної прози та без описів заради опису."
+      "constraint": "Дозволено відверту тематику й прямі формулювання — сайт для дорослих. Але це все одно факти: дослідження, рекорди, історія індустрії, анатомія, право й культура. Без еротичної прози та без описів заради опису.",
+      "wave_q2": 16
     },
     "phrase": {
       "band": "occasionally",
@@ -181,7 +206,8 @@
       "wave_q1": 13,
       "lang": "uk",
       "brief": "Фраза дня — випадковий вислів, що має сенс.",
-      "constraint": "Суспільне надбання або коротка цитата з атрибуцією."
+      "constraint": "Суспільне надбання або коротка цитата з атрибуцією.",
+      "wave_q2": 26
     },
     "predictions": {
       "band": "occasionally",
@@ -189,7 +215,8 @@
       "wave_q1": 13,
       "lang": "uk",
       "brief": "Жартівливе передбачення для того, хто в них не вірить.",
-      "constraint": "Вигадане, не досліджене — поле source навмисно відсутнє."
+      "constraint": "Вигадане, не досліджене — поле source навмисно відсутнє.",
+      "wave_q2": 27
     },
     "book_fiction": {
       "band": "occasionally",
@@ -197,7 +224,8 @@
       "wave_q1": 7,
       "lang": "uk",
       "brief": "Рекомендація художньої книги.",
-      "constraint": "Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним."
+      "constraint": "Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним.",
+      "wave_q2": 15
     },
     "book_fantasy": {
       "band": "occasionally",
@@ -205,7 +233,8 @@
       "wave_q1": 7,
       "lang": "uk",
       "brief": "Рекомендація фентезі-книги.",
-      "constraint": "Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним."
+      "constraint": "Автор не російський. Нічого російського чи радянського походження або пов'язаного з ним.",
+      "wave_q2": 15
     },
     "verse": {
       "band": "occasionally",
@@ -213,7 +242,8 @@
       "wave_q1": 13,
       "lang": "uk",
       "brief": "Короткий вірш дня.",
-      "constraint": "Суспільне надбання або коротка цитата з атрибуцією — уникати чинних авторських прав."
+      "constraint": "Суспільне надбання або коротка цитата з атрибуцією — уникати чинних авторських прав.",
+      "wave_q2": 26
     },
     "painting": {
       "band": "occasionally",
@@ -221,7 +251,8 @@
       "wave_q1": 13,
       "lang": "uk",
       "brief": "Картина дня: назва та автор, плюс посилання на зображення.",
-      "constraint": "Нічого російського походження. Посилання — на стабільне джерело (Wikimedia Commons або сайт музею)."
+      "constraint": "Нічого російського походження. Посилання — на стабільне джерело (Wikimedia Commons або сайт музею).",
+      "wave_q2": 26
     },
     "movie": {
       "band": "occasionally",
@@ -229,7 +260,8 @@
       "wave_q1": 7,
       "lang": "uk",
       "brief": "Рекомендація фільму.",
-      "constraint": "Нічого російського чи радянського походження або пов'язаного з ним."
+      "constraint": "Нічого російського чи радянського походження або пов'язаного з ним.",
+      "wave_q2": 16
     },
     "cartoon": {
       "band": "occasionally",
@@ -237,7 +269,8 @@
       "wave_q1": 7,
       "lang": "uk",
       "brief": "Рекомендація мультфільму чи аніме для дорослої аудиторії.",
-      "constraint": "Нічого російського чи радянського походження або пов'язаного з ним."
+      "constraint": "Нічого російського чи радянського походження або пов'язаного з ним.",
+      "wave_q2": 15
     },
     "holidays": {
       "band": "date-pinned",
@@ -245,7 +278,8 @@
       "wave_q1": 20,
       "lang": "uk",
       "brief": "Унікальні та цікаві свята з різних країн, прив'язані до конкретних дат.",
-      "constraint": "Кожен факт прив'язується до конкретної дати через schedule.json dates з полем index. Не потрапляє у звичайну чергу — cursor не рухається."
+      "constraint": "Кожен факт прив'язується до конкретної дати через schedule.json dates з полем index. Не потрапляє у звичайну чергу — cursor не рухається.",
+      "wave_q2": 34
     },
     "legends_ua": {
       "band": "often",
@@ -253,7 +287,8 @@
       "wave_q1": 22,
       "lang": "uk",
       "brief": "Українські легенди, фольклор і просто цікаві непідтверджені історії. Ухил у давніші часи — приблизно до 1990-х і старіше.",
-      "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт."
+      "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт.",
+      "wave_q2": 45
     },
     "legends_world": {
       "band": "often",
@@ -261,7 +296,8 @@
       "wave_q1": 9,
       "lang": "uk",
       "brief": "Легенди, фольклор і непідтверджені, але цікаві історії з усього світу. Ухил у давніші часи.",
-      "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт."
+      "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт.",
+      "wave_q2": 21
     },
     "legends_urban": {
       "band": "often",
@@ -269,7 +305,8 @@
       "wave_q1": 22,
       "lang": "uk",
       "brief": "Міські легенди з усього світу — від доби індустріалізації до сучасності.",
-      "constraint": "Подавати чесно як міську легенду. Де історію переконливо спростовано — казати про це прямо."
+      "constraint": "Подавати чесно як міську легенду. Де історію переконливо спростовано — казати про це прямо.",
+      "wave_q2": 50
     },
     "legends_japan": {
       "band": "moderate",
@@ -277,14 +314,16 @@
       "wave_q1": 26,
       "lang": "uk",
       "brief": "Японські легенди, фольклор, йокаї та непідтверджені, але цікаві історії.",
-      "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт."
+      "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт.",
+      "wave_q2": 53
     },
     "useless_facts": {
       "band": "often",
       "draws_per_week": 2,
       "wave_q1": 26,
       "lang": "uk",
-      "brief": "Цікаві, але абсолютно непотрібні факти."
+      "brief": "Цікаві, але абсолютно непотрібні факти.",
+      "wave_q2": 53
     },
     "kids": {
       "band": "very often",
@@ -292,7 +331,8 @@
       "wave_q1": 52,
       "lang": "uk",
       "brief": "Короткі факти, цікаві дитині 6–9 років.",
-      "constraint": "Коротко, простими словами, без складних термінів. Нічого лячного чи травматичного."
+      "constraint": "Коротко, простими словами, без складних термінів. Нічого лячного чи травматичного.",
+      "wave_q2": 105
     },
     "english_words": {
       "band": "often",
@@ -300,7 +340,8 @@
       "wave_q1": 26,
       "lang": "en",
       "brief": "A single English word with its 2-4 most-used meanings. Favour words a non-native speaker already knows but only in one sense.",
-      "constraint": "Written in English. Show the distinct senses with a short example each — the point is the polysemy, not the definition."
+      "constraint": "Written in English. Show the distinct senses with a short example each — the point is the polysemy, not the definition.",
+      "wave_q2": 26
     },
     "urban_dictionary": {
       "band": "moderate",
@@ -308,7 +349,8 @@
       "wave_q1": 26,
       "lang": "en",
       "brief": "English slang and street language of the kind catalogued on Urban Dictionary.",
-      "constraint": "Written in English. Real, current, widely-used slang with a clear definition and an example. Keep it non-explicit — crude is fine where the term genuinely is, gratuitous is not."
+      "constraint": "Written in English. Real, current, widely-used slang with a clear definition and an example. Keep it non-explicit — crude is fine where the term genuinely is, gratuitous is not.",
+      "wave_q2": 52
     },
     "ukrainian_words": {
       "band": "moderate",
@@ -316,7 +358,8 @@
       "wave_q1": 26,
       "lang": "uk",
       "brief": "Питомо українські слова — передусім ті, що не мають точного відповідника в російській, — а також лайливі слова, якими можна лаятися без матюків.",
-      "constraint": "Пояснювати значення та доречний контекст. Твердження «немає відповідника в російській» формулювати обережно — краще «рідко має точний відповідник»."
+      "constraint": "Пояснювати значення та доречний контекст. Твердження «немає відповідника в російській» формулювати обережно — краще «рідко має точний відповідник».",
+      "wave_q2": 53
     }
   }
 }
