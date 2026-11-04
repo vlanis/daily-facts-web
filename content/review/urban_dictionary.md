@@ -1,9 +1,9 @@
-<!-- daily-facts-review v1 topic=urban_dictionary entries=26 fingerprint=d323699fc665 -->
+<!-- daily-facts-review v1 topic=urban_dictionary entries=52 fingerprint=468f6b829d97 -->
 # urban_dictionary
 
 *English slang and street language of the kind catalogued on Urban Dictionary.*
 
-**26 facts · 0 approved · 26 imported · target 26 · lang en**
+**52 facts · 0 approved · 26 imported · target 52 · lang en**
 
 > ℹ️ Written in English. Real, current, widely-used slang with a clear definition and an example. Keep it non-explicit — crude is fine where the term genuinely is, gratuitous is not.
 
@@ -90,4 +90,82 @@ Then run: `node scripts/review-apply.mjs`
 
 - [~] **26.** **To understand the assignment** — to have grasped exactly what was needed and delivered it. *"That outfit understood the assignment."* Praise, and applied to things as often as to people.
   <br>↳ *English slang usage*
+
+- [ ] **27.** **Situationship** — a romantic relationship that is more than friendship but has never been defined or committed to. *"Are you two dating?" — "It's more of a situationship."* Oxford shortlisted it for Word of the Year 2023.
+  <br>↳ *Oxford Languages, 2023*
+
+- [ ] **28.** **To gaslight** — to manipulate someone into doubting their own memory or judgement. *"Stop gaslighting me, I know what you said."* From the 1944 film «Gaslight»; Merriam-Webster's Word of the Year 2022.
+  <br>↳ *Merriam-Webster, 2022*
+
+- [ ] **29.** **Brain rot** — the supposed mental decline from scrolling trivial online content, and the content itself. *"Two hours of short videos — pure brain rot."* Oxford's Word of the Year 2024.
+  <br>↳ *Oxford Languages, 2024*
+
+- [ ] **30.** **Goated** — being the greatest, from *GOAT* (Greatest Of All Time). *"Her cooking is goated."*
+  <br>↳ *Urban Dictionary; Merriam-Webster*
+
+- [ ] **31.** **Lit** — exciting, excellent, full of energy, usually about a party or event. *"That concert was lit."* Older slang for drunk, which still survives in some contexts.
+  <br>↳ *Merriam-Webster*
+
+- [ ] **32.** **Vibe check** — a quick assessment of someone's mood or a place's atmosphere. *"Vibe check: how's everyone feeling?"* "Failing the vibe check" means giving off a bad impression.
+  <br>↳ *Dictionary.com*
+
+- [ ] **33.** **FOMO** — fear of missing out, the anxiety that others are having fun without you. Its opposite, **JOMO**, is the joy of missing out — happily staying in.
+  <br>↳ *Oxford English Dictionary*
+
+- [ ] **34.** **Hangry** — so hungry that you become irritable. *"Don't talk to me before lunch, I'm hangry."* Added to the Oxford English Dictionary in 2018.
+  <br>↳ *Oxford English Dictionary, 2018*
+
+- [ ] **35.** **To ratio** — on social media, to get more replies or likes on a reply than the original post got, usually signalling that people disagree with the original. *"He got ratioed."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **36.** **Stan** — an extremely devoted fan; also a verb. *"I stan this band."* From Eminem's 2000 song «Stan» about an obsessive fan. Added to the OED in 2019.
+  <br>↳ *Oxford English Dictionary, 2019*
+
+- [ ] **37.** **Simp** — someone who does far too much for a person they're attracted to, hoping to win them over. Mocking, often unfair. *"He drove four hours just to bring her coffee — total simp."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **38.** **Bet** — "okay, deal, I agree". *"See you at eight?" — "Bet."* A short, confident yes.
+  <br>↳ *Urban Dictionary; Dictionary.com*
+
+- [ ] **39.** **Slay** — to do something brilliantly, especially look great or perform. *"You slayed that presentation."*
+  <br>↳ *Dictionary.com*
+
+- [ ] **40.** **It's giving…** — "it has the vibe of…". *"That outfit — it's giving 1970s."* Often cut short: *"It's giving."* simply means "this is great".
+  <br>↳ *Dictionary.com*
+
+- [ ] **41.** **Periodt** — an emphatic "period", ending an argument: what I said is final. *"She's the best singer alive, periodt."*
+  <br>↳ *Dictionary.com; African-American Vernacular English*
+
+- [ ] **42.** **Basic** — unoriginal, mainstream in an uninteresting way. *"Pumpkin spice latte and a fall selfie? So basic."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **43.** **Extra** — over the top, dramatic, doing far more than needed. *"She brought a cake, balloons and a speech — so extra."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **44.** **Shook** — shocked or shaken. *"I'm still shook from that ending."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **45.** **Snatched** — looking great, particularly in fit or style. *"Your outfit is snatched."*
+  <br>↳ *Dictionary.com*
+
+- [ ] **46.** **To throw shade** — to insult someone subtly or indirectly. *"Was that comment shade?"* From New York drag ball culture, documented in the 1990 film «Paris Is Burning».
+  <br>↳ *Merriam-Webster*
+
+- [ ] **47.** **Yeet** — to throw something with force; also an exclamation of excitement. *"He yeeted his phone across the room."* Spread by a 2014 Vine dance video.
+  <br>↳ *Merriam-Webster*
+
+- [ ] **48.** **Boujee** — acting fancy or high-class, sometimes pretentiously. From French *bourgeois*. *"Dinner at that place is too boujee for me."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **49.** **Clapback** — a sharp, witty response to criticism. *"Her clapback to the troll went viral."*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **50.** **Glow-up** — a dramatic improvement in appearance or life, usually over time. *"Have you seen her glow-up since school?"*
+  <br>↳ *Merriam-Webster*
+
+- [ ] **51.** **To ship** — to want two people (real or fictional) to be in a relationship. From *relationship*. *"I totally ship them."*
+  <br>↳ *Oxford English Dictionary*
+
+- [ ] **52.** **Fam** — close friends, as if family. *"What's up, fam?"* Common in American and British street slang for decades, now used everywhere online.
+  <br>↳ *Oxford English Dictionary*
 

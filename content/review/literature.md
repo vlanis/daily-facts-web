@@ -3,7 +3,7 @@
 
 *Світова література, що передує 2000 року: твори, автори, історії створення.*
 
-**52 facts · 0 approved · 52 imported · target 9 · lang uk**
+**52 facts · 0 approved · 52 imported · target 52 · lang uk**
 
 Tick `- [ ]` → `- [x]` to approve. Unticking an approved fact sends it back to draft. Lines marked `[~]` are already imported and are locked.
 

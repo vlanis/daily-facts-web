@@ -3,7 +3,7 @@
 
 *Історія України.*
 
-**13 facts · 0 approved · 13 imported · target 9 · lang uk**
+**13 facts · 0 approved · 13 imported · target 13 · lang uk**
 
 Tick `- [ ]` → `- [x]` to approve. Unticking an approved fact sends it back to draft. Lines marked `[~]` are already imported and are locked.
 

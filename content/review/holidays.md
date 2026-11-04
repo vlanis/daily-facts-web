@@ -3,7 +3,7 @@
 
 *Унікальні та цікаві свята з різних країн, прив'язані до конкретних дат.*
 
-**34 facts · 0 approved · 34 imported · target 20 · lang uk**
+**34 facts · 0 approved · 34 imported · target 34 · lang uk**
 
 > ℹ️ Кожен факт прив'язується до конкретної дати через schedule.json dates з полем index. Не потрапляє у звичайну чергу — cursor не рухається.
 

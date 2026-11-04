@@ -9,7 +9,7 @@
     "Сумнівні або апокрифічні історії або не брати, або подавати чесно — як легенду, що не підтверджена джерелами."
   ],
   "current_wave": "wave_q2",
-  "wave_q2_comment": "wave_q2 is CUMULATIVE (total draft lines incl. imported). Sized 2026-11-04 by simulating generate.mjs forward to 2027-02-25 (first wave runs dry ~2026-11-24) with padded topics, max draws over 5 runs minus remaining unread. english_words and history_ua are cycled (cursor wrapped to 0), so appends would sit behind re-serves; their pool partners carry the load instead and they get no new facts.",
+  "wave_q2_comment": "wave_q2 is CUMULATIVE (total draft lines incl. imported). Sized 2026-11-04 by simulating generate.mjs forward to 2027-02-25 (first wave runs dry ~2026-11-24) with padded topics, max draws over 5 runs minus remaining unread. english_words and history_ua are cycled (cursor wrapped to 0), so appends would sit behind re-serves; their pool partners carry the load instead and they get no new facts. legends_ua carries +3 over the simulated need: a verification run showed one early repeat from pool randomness.",
   "topics": {
     "literature": {
       "band": "very often",
@@ -288,7 +288,7 @@
       "lang": "uk",
       "brief": "Українські легенди, фольклор і просто цікаві непідтверджені історії. Ухил у давніші часи — приблизно до 1990-х і старіше.",
       "constraint": "Подавати чесно як легенду чи повір'я, а не як встановлений факт.",
-      "wave_q2": 45
+      "wave_q2": 48
     },
     "legends_world": {
       "band": "often",

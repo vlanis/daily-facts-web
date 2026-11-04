@@ -64,7 +64,7 @@ function readDraft(topic) {
   return { text, entries };
 }
 
-function renderTopic(topic, def, draft) {
+function renderTopic(topic, def, draft, wave) {
   const { entries, text } = draft;
   const approved = entries.filter((e) => e.status === "approved").length;
   const imported = entries.filter((e) => e.status === "imported").length;
@@ -81,7 +81,7 @@ function renderTopic(topic, def, draft) {
   out.push("");
   out.push(
     `**${entries.length} facts · ${approved} approved · ${imported} imported · ` +
-      `target ${def.wave_q1 ?? "—"} · lang ${def.lang ?? "uk"}**`,
+      `target ${def[wave] ?? "—"} · lang ${def.lang ?? "uk"}**`,
   );
   out.push("");
 
@@ -151,7 +151,7 @@ function main() {
     const draft = readDraft(topic);
     writeFileSync(
       join(REVIEW, `${topic}.md`),
-      renderTopic(topic, def, draft) + "\n",
+      renderTopic(topic, def, draft, manifest.current_wave ?? "wave_q1") + "\n",
     );
 
     const approved = draft.entries.filter((e) => e.status === "approved").length;
