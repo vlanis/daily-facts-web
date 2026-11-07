@@ -4,7 +4,7 @@
     "cycled": false
   },
   "english": {
-    "next_index": 16,
+    "next_index": 17,
     "cycled": false
   },
   "legends_ua": {
@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 32,
+    "next_index": 33,
     "cycled": false
   },
   "useless_facts": {
@@ -24,7 +24,7 @@
     "cycled": false
   },
   "ukrainian_words": {
-    "next_index": 21,
+    "next_index": 22,
     "cycled": false
   },
   "japanese": {
@@ -36,7 +36,7 @@
     "cycled": false
   },
   "legends_urban": {
-    "next_index": 18,
+    "next_index": 19,
     "cycled": false
   },
   "technology": {
@@ -64,7 +64,7 @@
     "cycled": false
   },
   "literature_ua": {
-    "next_index": 18,
+    "next_index": 19,
     "cycled": false
   },
   "english_words": {
@@ -96,7 +96,7 @@
     "cycled": false
   },
   "popculture": {
-    "next_index": 17,
+    "next_index": 18,
     "cycled": false
   },
   "book_fantasy": {
@@ -128,8 +128,8 @@
     "cycled": false
   },
   "book_fiction": {
-    "next_index": 6,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "history_ancient": {
     "next_index": 3,
@@ -156,7 +156,7 @@
     "cycled": false
   },
   "cars": {
-    "next_index": 2,
+    "next_index": 3,
     "cycled": false
   }
 }
