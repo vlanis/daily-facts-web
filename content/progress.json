@@ -1,10 +1,10 @@
 {
   "literature_modern": {
-    "next_index": 29,
+    "next_index": 30,
     "cycled": false
   },
   "english": {
-    "next_index": 19,
+    "next_index": 20,
     "cycled": false
   },
   "legends_ua": {
@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 34,
+    "next_index": 35,
     "cycled": false
   },
   "useless_facts": {
@@ -20,7 +20,7 @@
     "cycled": false
   },
   "medicine": {
-    "next_index": 23,
+    "next_index": 24,
     "cycled": false
   },
   "ukrainian_words": {
@@ -76,7 +76,7 @@
     "cycled": false
   },
   "urban_dictionary": {
-    "next_index": 22,
+    "next_index": 23,
     "cycled": false
   },
   "animals": {
@@ -96,8 +96,8 @@
     "cycled": false
   },
   "popculture": {
-    "next_index": 19,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "book_fantasy": {
     "next_index": 4,
@@ -124,8 +124,8 @@
     "cycled": false
   },
   "cooking": {
-    "next_index": 8,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "book_fiction": {
     "next_index": 0,
