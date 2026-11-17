@@ -1,10 +1,10 @@
 {
   "literature_modern": {
-    "next_index": 31,
+    "next_index": 32,
     "cycled": false
   },
   "english": {
-    "next_index": 22,
+    "next_index": 23,
     "cycled": false
   },
   "legends_ua": {
@@ -12,23 +12,23 @@
     "cycled": false
   },
   "space": {
-    "next_index": 36,
+    "next_index": 37,
     "cycled": false
   },
   "useless_facts": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "medicine": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "ukrainian_words": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "japanese": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "kids": {
@@ -36,7 +36,7 @@
     "cycled": false
   },
   "legends_urban": {
-    "next_index": 20,
+    "next_index": 21,
     "cycled": false
   },
   "technology": {
