@@ -32,19 +32,19 @@
     "cycled": false
   },
   "kids": {
-    "next_index": 48,
+    "next_index": 49,
     "cycled": false
   },
   "legends_urban": {
-    "next_index": 21,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "technology": {
-    "next_index": 36,
+    "next_index": 37,
     "cycled": false
   },
   "ukrainian_language": {
-    "next_index": 36,
+    "next_index": 37,
     "cycled": false
   },
   "history_ua": {
@@ -52,16 +52,16 @@
     "cycled": true
   },
   "legends_japan": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "guinness": {
-    "next_index": 12,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "predictions": {
-    "next_index": 12,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "literature_ua": {
     "next_index": 21,
@@ -132,7 +132,7 @@
     "cycled": true
   },
   "history_ancient": {
-    "next_index": 4,
+    "next_index": 5,
     "cycled": false
   },
   "literature": {
