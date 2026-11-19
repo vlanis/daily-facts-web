@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-19",
+  "slots": [
+    {
+      "slot": "Literature",
+      "topic": "literature_ua",
+      "fact": "Емма Андієвська, українська письменниця й художниця, більшу частину життя прожила за кордоном і створила власну систему віршування із сотнями сонетів. Її тексти навмисно опираються переказу — вона казала, що вірш не мусить нічого пояснювати.",
+      "repeat": false,
+      "pool": 3
+    },
+    {
+      "slot": "English",
+      "topic": "english",
+      "fact": "The phrase \"with all due respect\" almost always precedes disrespect. Native speakers hear it as a warning, not a courtesy — much like \"no offence, but\".",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Popculture",
+      "topic": "popculture_modern",
+      "fact": "Пісня «Running Up That Hill» 1985 року повернулася в чарти 2022-го після появи в серіалі й уперше в історії досягла першого місця в Британії через тридцять сім років після виходу.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Space",
+      "topic": "space",
+      "fact": "Перший знімок телескопа Hubble вийшов розмитим: головне дзеркало відшліфували з помилкою завтовшки приблизно у п'ятдесяту частину людської волосини. 1993 року астронавти прилетіли й поставили телескопу, по суті, окуляри.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Medicine",
+      "topic": "medicine",
+      "fact": "Смак сприймають не лише язиком: значну частину того, що ми називаємо смаком, дає нюх. Саме тому із закладеним носом їжа здається прісною, а не менш солоною.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Urban Dictionary",
+      "topic": "urban_dictionary",
+      "fact": "**NPC** — someone behaving as though running on a script, with no original thought, from *non-player character* in games. *\"He gives NPC energy.\"* Fairly cutting, so used carefully.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Things",
+      "topic": "animals",
+      "fact": "Морські видри тримаються за лапи уві сні, щоб їх не рознесло течією. У неволі, де течії немає, вони все одно це роблять — а ще носять улюблений камінь для розбивання мушель у складці шкіри під лапою.",
+      "repeat": false,
+      "pool": 3
+    }
+  ]
+}
