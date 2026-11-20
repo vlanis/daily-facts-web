@@ -1,6 +1,6 @@
 {
   "literature_modern": {
-    "next_index": 32,
+    "next_index": 33,
     "cycled": false
   },
   "english": {
@@ -8,7 +8,7 @@
     "cycled": false
   },
   "legends_ua": {
-    "next_index": 20,
+    "next_index": 21,
     "cycled": false
   },
   "space": {
@@ -28,11 +28,11 @@
     "cycled": false
   },
   "japanese": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "kids": {
-    "next_index": 49,
+    "next_index": 50,
     "cycled": false
   },
   "legends_urban": {
@@ -40,11 +40,11 @@
     "cycled": true
   },
   "technology": {
-    "next_index": 37,
+    "next_index": 38,
     "cycled": false
   },
   "ukrainian_language": {
-    "next_index": 37,
+    "next_index": 38,
     "cycled": false
   },
   "history_ua": {
@@ -84,12 +84,12 @@
     "cycled": false
   },
   "travel": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "painting": {
-    "next_index": 12,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "legends_world": {
     "next_index": 8,
