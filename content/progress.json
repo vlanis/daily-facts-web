@@ -4,7 +4,7 @@
     "cycled": false
   },
   "english": {
-    "next_index": 24,
+    "next_index": 25,
     "cycled": false
   },
   "legends_ua": {
@@ -12,8 +12,8 @@
     "cycled": false
   },
   "space": {
-    "next_index": 38,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "useless_facts": {
     "next_index": 25,
@@ -24,8 +24,8 @@
     "cycled": true
   },
   "ukrainian_words": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "japanese": {
     "next_index": 0,
@@ -64,7 +64,7 @@
     "cycled": true
   },
   "literature_ua": {
-    "next_index": 0,
+    "next_index": 1,
     "cycled": true
   },
   "english_words": {
@@ -72,7 +72,7 @@
     "cycled": true
   },
   "popculture_modern": {
-    "next_index": 17,
+    "next_index": 18,
     "cycled": false
   },
   "urban_dictionary": {
@@ -92,7 +92,7 @@
     "cycled": true
   },
   "legends_world": {
-    "next_index": 8,
+    "next_index": 9,
     "cycled": false
   },
   "popculture": {
@@ -100,7 +100,7 @@
     "cycled": true
   },
   "book_fantasy": {
-    "next_index": 5,
+    "next_index": 6,
     "cycled": false
   },
   "ai": {
@@ -148,7 +148,7 @@
     "cycled": false
   },
   "videogames": {
-    "next_index": 4,
+    "next_index": 5,
     "cycled": false
   },
   "porn": {
