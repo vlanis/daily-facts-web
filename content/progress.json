@@ -4,8 +4,8 @@
     "cycled": false
   },
   "english": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "legends_ua": {
     "next_index": 21,
@@ -16,8 +16,8 @@
     "cycled": true
   },
   "useless_facts": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "medicine": {
     "next_index": 0,
@@ -32,7 +32,7 @@
     "cycled": true
   },
   "kids": {
-    "next_index": 50,
+    "next_index": 51,
     "cycled": false
   },
   "legends_urban": {
@@ -52,8 +52,8 @@
     "cycled": true
   },
   "legends_japan": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "guinness": {
     "next_index": 0,
@@ -84,8 +84,8 @@
     "cycled": false
   },
   "travel": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "painting": {
     "next_index": 0,
@@ -104,12 +104,12 @@
     "cycled": false
   },
   "ai": {
-    "next_index": 10,
+    "next_index": 11,
     "cycled": false
   },
   "verse": {
-    "next_index": 12,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "gardening": {
     "next_index": 8,
@@ -132,7 +132,7 @@
     "cycled": true
   },
   "history_ancient": {
-    "next_index": 5,
+    "next_index": 6,
     "cycled": false
   },
   "literature": {
