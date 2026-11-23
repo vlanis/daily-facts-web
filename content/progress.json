@@ -32,20 +32,20 @@
     "cycled": true
   },
   "kids": {
-    "next_index": 51,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "legends_urban": {
     "next_index": 0,
     "cycled": true
   },
   "technology": {
-    "next_index": 38,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "ukrainian_language": {
-    "next_index": 38,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "history_ua": {
     "next_index": 0,
@@ -72,15 +72,15 @@
     "cycled": true
   },
   "popculture_modern": {
-    "next_index": 18,
+    "next_index": 19,
     "cycled": false
   },
   "urban_dictionary": {
-    "next_index": 25,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "animals": {
-    "next_index": 8,
+    "next_index": 9,
     "cycled": false
   },
   "travel": {
@@ -120,8 +120,8 @@
     "cycled": false
   },
   "phrase": {
-    "next_index": 12,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "cooking": {
     "next_index": 0,
@@ -136,12 +136,12 @@
     "cycled": false
   },
   "literature": {
-    "next_index": 8,
+    "next_index": 9,
     "cycled": false
   },
   "cartoon": {
-    "next_index": 6,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "history_modern": {
     "next_index": 7,
