@@ -4,68 +4,68 @@
     "cycled": false
   },
   "english": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "legends_ua": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 22,
+    "cycled": false
   },
   "space": {
-    "next_index": 1,
-    "cycled": true
+    "next_index": 39,
+    "cycled": false
   },
   "useless_facts": {
-    "next_index": 1,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "medicine": {
-    "next_index": 1,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "ukrainian_words": {
-    "next_index": 1,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "japanese": {
-    "next_index": 1,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "kids": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 52,
+    "cycled": false
   },
   "legends_urban": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 22,
+    "cycled": false
   },
   "technology": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 39,
+    "cycled": false
   },
   "ukrainian_language": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 39,
+    "cycled": false
   },
   "history_ua": {
     "next_index": 0,
     "cycled": true
   },
   "legends_japan": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "guinness": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 13,
+    "cycled": false
   },
   "predictions": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 13,
+    "cycled": false
   },
   "literature_ua": {
-    "next_index": 1,
-    "cycled": true
+    "next_index": 22,
+    "cycled": false
   },
   "english_words": {
     "next_index": 1,
@@ -76,28 +76,28 @@
     "cycled": false
   },
   "urban_dictionary": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "animals": {
     "next_index": 9,
     "cycled": false
   },
   "travel": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 26,
+    "cycled": false
   },
   "painting": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 13,
+    "cycled": false
   },
   "legends_world": {
     "next_index": 9,
     "cycled": false
   },
   "popculture": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 20,
+    "cycled": false
   },
   "book_fantasy": {
     "next_index": 6,
@@ -108,8 +108,8 @@
     "cycled": false
   },
   "verse": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 13,
+    "cycled": false
   },
   "gardening": {
     "next_index": 8,
@@ -120,16 +120,16 @@
     "cycled": false
   },
   "phrase": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 13,
+    "cycled": false
   },
   "cooking": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 9,
+    "cycled": false
   },
   "book_fiction": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 7,
+    "cycled": false
   },
   "history_ancient": {
     "next_index": 6,
@@ -140,8 +140,8 @@
     "cycled": false
   },
   "cartoon": {
-    "next_index": 0,
-    "cycled": true
+    "next_index": 7,
+    "cycled": false
   },
   "history_modern": {
     "next_index": 7,
