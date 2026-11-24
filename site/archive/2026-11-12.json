@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-12",
+  "slots": [
+    {
+      "slot": "Literature",
+      "topic": "literature_modern",
+      "fact": "Збірку віршів «Молоко і мед» Рупі Каур 2014 року видала сама, через сервіс друку на замовлення. Читачів вона знайшла в Instagram — і книжка розійшлася мільйонними накладами, змусивши традиційні видавництва вперше всерйоз рахуватися з соцмережами.",
+      "repeat": false,
+      "pool": 3
+    },
+    {
+      "slot": "English",
+      "topic": "english",
+      "fact": "English has no word for the day after tomorrow, though many languages do. Speakers manage with the phrase itself, or borrow *overmorrow*, an archaic word that never quite came back.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Popculture",
+      "topic": "popculture",
+      "fact": "Ляльку Барбі назвали на честь доньки засновниці компанії, а її «хлопця» Кена — на честь сина. Прототипом послужила німецька лялька, яку продавали дорослим як сувенір, а не як іграшку.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Space",
+      "topic": "space",
+      "fact": "Нептун відкрили 1846 року, і свій перший повний оберт навколо Сонця від моменту відкриття він завершив аж 2011-го. Рік там триває майже 165 земних.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Medicine",
+      "topic": "medicine",
+      "fact": "Серце має власну електричну систему й може битися поза тілом, поки має кисень і поживні речовини. Саме тому пересаджене серце починає працювати в новому організмі без «запуску» ззовні.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Urban Dictionary",
+      "topic": "urban_dictionary",
+      "fact": "**To be cooked** — to be in serious trouble or beyond saving. *\"I haven't revised at all, I'm cooked.\"* The opposite, *let him cook*, means leave someone alone because their odd plan is working.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Things",
+      "topic": "cooking",
+      "fact": "Не кладіть на сковороду все одразу. Якщо продукти лежать щільно, вони віддають вологу швидше, ніж та встигає випаруватися, і замість засмаженої скоринки виходить тушкування у власному соку. Дві партії поспіль дадуть кращий результат, ніж одна велика.",
+      "repeat": false,
+      "pool": 3
+    }
+  ]
+}

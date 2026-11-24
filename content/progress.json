@@ -1,162 +1,162 @@
 {
   "literature_modern": {
-    "next_index": 25,
+    "next_index": 34,
     "cycled": false
   },
   "english": {
-    "next_index": 15,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "legends_ua": {
-    "next_index": 17,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "space": {
-    "next_index": 31,
-    "cycled": false
+    "next_index": 1,
+    "cycled": true
   },
   "useless_facts": {
-    "next_index": 21,
-    "cycled": false
+    "next_index": 1,
+    "cycled": true
   },
   "medicine": {
-    "next_index": 21,
-    "cycled": false
+    "next_index": 1,
+    "cycled": true
   },
   "ukrainian_words": {
-    "next_index": 21,
-    "cycled": false
+    "next_index": 1,
+    "cycled": true
   },
   "japanese": {
-    "next_index": 21,
-    "cycled": false
+    "next_index": 1,
+    "cycled": true
   },
   "kids": {
-    "next_index": 41,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "legends_urban": {
-    "next_index": 18,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "technology": {
-    "next_index": 31,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "ukrainian_language": {
-    "next_index": 31,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "history_ua": {
     "next_index": 0,
     "cycled": true
   },
   "legends_japan": {
-    "next_index": 21,
-    "cycled": false
-  },
-  "guinness": {
-    "next_index": 11,
-    "cycled": false
-  },
-  "predictions": {
-    "next_index": 11,
-    "cycled": false
-  },
-  "literature_ua": {
-    "next_index": 18,
-    "cycled": false
-  },
-  "english_words": {
     "next_index": 0,
     "cycled": true
   },
+  "guinness": {
+    "next_index": 0,
+    "cycled": true
+  },
+  "predictions": {
+    "next_index": 0,
+    "cycled": true
+  },
+  "literature_ua": {
+    "next_index": 1,
+    "cycled": true
+  },
+  "english_words": {
+    "next_index": 1,
+    "cycled": true
+  },
   "popculture_modern": {
-    "next_index": 13,
+    "next_index": 19,
     "cycled": false
   },
   "urban_dictionary": {
-    "next_index": 20,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "animals": {
-    "next_index": 6,
-    "cycled": false
-  },
-  "travel": {
-    "next_index": 20,
-    "cycled": false
-  },
-  "painting": {
-    "next_index": 10,
-    "cycled": false
-  },
-  "legends_world": {
-    "next_index": 7,
-    "cycled": false
-  },
-  "popculture": {
-    "next_index": 17,
-    "cycled": false
-  },
-  "book_fantasy": {
-    "next_index": 4,
-    "cycled": false
-  },
-  "ai": {
     "next_index": 9,
     "cycled": false
   },
-  "verse": {
-    "next_index": 10,
+  "travel": {
+    "next_index": 0,
+    "cycled": true
+  },
+  "painting": {
+    "next_index": 0,
+    "cycled": true
+  },
+  "legends_world": {
+    "next_index": 9,
     "cycled": false
   },
-  "gardening": {
+  "popculture": {
+    "next_index": 0,
+    "cycled": true
+  },
+  "book_fantasy": {
     "next_index": 6,
+    "cycled": false
+  },
+  "ai": {
+    "next_index": 11,
+    "cycled": false
+  },
+  "verse": {
+    "next_index": 0,
+    "cycled": true
+  },
+  "gardening": {
+    "next_index": 8,
     "cycled": false
   },
   "movie": {
-    "next_index": 4,
+    "next_index": 6,
     "cycled": false
   },
   "phrase": {
-    "next_index": 10,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "cooking": {
-    "next_index": 8,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "book_fiction": {
-    "next_index": 6,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "history_ancient": {
-    "next_index": 3,
+    "next_index": 6,
     "cycled": false
   },
   "literature": {
-    "next_index": 8,
+    "next_index": 9,
     "cycled": false
   },
   "cartoon": {
-    "next_index": 6,
-    "cycled": false
+    "next_index": 0,
+    "cycled": true
   },
   "history_modern": {
-    "next_index": 5,
+    "next_index": 7,
     "cycled": false
   },
   "videogames": {
-    "next_index": 4,
-    "cycled": false
-  },
-  "porn": {
     "next_index": 5,
     "cycled": false
   },
+  "porn": {
+    "next_index": 7,
+    "cycled": false
+  },
   "cars": {
-    "next_index": 2,
+    "next_index": 3,
     "cycled": false
   }
 }

@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-05",
+  "slots": [
+    {
+      "slot": "Literature",
+      "topic": "literature_modern",
+      "fact": "Джумпа Лагірі, лауреатка Пулітцерівської премії, у певний момент перестала писати англійською. Вона переїхала до Рима, вивчила італійську і почала писати нею — свідомо відмовившись від мови, якою досконало володіла, заради мови, у якій почувалася початківцем.",
+      "repeat": false,
+      "pool": 3
+    },
+    {
+      "slot": "English",
+      "topic": "english",
+      "fact": "Two useful softeners for disagreement: \"I see what you mean, but…\" and \"That's fair, though…\". Both signal you have understood before objecting, which in English matters more than the objection itself.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Popculture",
+      "topic": "popculture_modern",
+      "fact": "Пісня «Despacito» 2017 року стала першим переважно іспаномовним треком, який очолив американський чарт за понад двадцять років. До того таке вдавалося хіба «Macarena» у 1990-х.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Space",
+      "topic": "space",
+      "fact": "Андромеду можна побачити неозброєним оком — це найдальший об'єкт, доступний людському зору без приладів. Світло від неї летіло до нас два з половиною мільйони років.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Medicine",
+      "topic": "medicine",
+      "fact": "Опіки й рани в роті гояться швидше, ніж на шкірі. Слина містить фактори росту, а слизова оболонка від початку налаштована на постійне оновлення.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Urban Dictionary",
+      "topic": "urban_dictionary",
+      "fact": "**Bussin'** — very good, said almost exclusively about food. *\"This is bussin'.\"* From African American Vernacular English, and a common example of slang that spread far beyond its origin without credit.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Things",
+      "topic": "gardening",
+      "fact": "Найстаріша відома жива рослина — кущ королівського ломиноса в Тасманії, вік якого оцінюють приблизно в 43 тисячі років. Він розмножується лише клонуванням: насіння цієї рослини стерильне.",
+      "repeat": false,
+      "pool": 3
+    }
+  ]
+}
