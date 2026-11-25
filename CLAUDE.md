@@ -94,14 +94,15 @@ specs/
    to pull from a pool of topics.
 
 4. **Unread-preferring draw, not pure random.** Within a slot's topic list,
-   topics that haven't exhausted their fact list are preferred over ones
-   that have already cycled, so a slot doesn't keep re-serving repeats from
-   one burned-through topic while others sit unused. Full rules in
+   only topics with unread facts are drawn; exhausted ones are skipped, and
+   a slot whose topics are all exhausted is left off the day. Full rules in
    `specs/generation-algorithm.md`.
 
-5. **Cycling is tracked and flagged, not silently looped.** When a topic
-   runs out of unread facts, it wraps to index 0 and sets `cycled: true`,
-   and the workflow surfaces this so the owner knows to add more content.
+5. **Exhaustion is tracked and flagged, never looped.** When a topic runs
+   out of unread facts, its cursor stays parked at the end (no wrap to 0)
+   and `cycled: true` is set; the workflow surfaces this so the owner
+   knows to add more content. Appended facts are served next, and the job
+   re-arms the topic automatically — no hand edits to `progress.json`.
 
 6. **Additional per-date slots are additive, not overriding.** A specific
    calendar date can add extra slots on top of that weekday's normal

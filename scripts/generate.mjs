@@ -127,52 +127,60 @@ function resolveSlot(slotDef, topics, progress, newlyCycled) {
     };
   }
 
-  const nonEmpty = topicIds.filter((t) => factsFor(topics, t).length > 0);
-  if (nonEmpty.length === 0) {
-    // No content at all for this slot — skip, but surface it.
+  // Only topics with unread facts are drawable. An exhausted topic is never
+  // re-served: its cursor stays parked at the end, so facts appended later are
+  // the next ones it serves. Empty topics count as exhausted too.
+  const viable = topicIds.filter((t) => !isExhausted(topics, progress, t));
+  if (viable.length === 0) {
+    // Nothing unread anywhere in this slot — leave it off the day, but
+    // surface it.
     return { unresolved: slot };
   }
 
-  const unCycledNonEmpty = nonEmpty.filter(
-    (t) => progress[t]?.cycled !== true,
-  );
-
-  let topic;
-  let repeat;
-  if (unCycledNonEmpty.length > 0) {
-    topic = pickUniform(unCycledNonEmpty);
-    repeat = false;
-  } else {
-    // Every viable topic has already cycled — a repeat draw.
-    topic = pickUniform(nonEmpty);
-    repeat = true;
-  }
-
+  const topic = pickUniform(viable);
   const facts = factsFor(topics, topic);
   const entry = progress[topic] ?? { next_index: 0, cycled: false };
   const index = entry.next_index ?? 0;
   const fact = facts[index];
 
   // Advance the cursor immediately so later slots this run see the update.
-  let nextIndex = index + 1;
+  // No wrap: reaching the end marks the topic exhausted (`cycled`).
+  const nextIndex = index + 1;
   let cycled = entry.cycled === true;
-  if (nextIndex >= facts.length) {
-    nextIndex = 0;
-    if (!cycled) {
-      cycled = true;
-      newlyCycled.add(topic); // false -> true transition, recorded once
-    }
+  if (nextIndex >= facts.length && !cycled) {
+    cycled = true;
+    newlyCycled.add(topic); // false -> true transition, recorded once
   }
   progress[topic] = { next_index: nextIndex, cycled };
 
   // `pool` is how many topics the slot was configured to choose between, not
   // how many were viable today. The UI shows the drawn topic only when the pool
   // is larger than one, i.e. only when knowing the source tells the reader
-  // something the slot name didn't already.
-  return { resolved: { slot, topic, fact, repeat, pool: topicIds.length } };
+  // something the slot name didn't already. `repeat` is always false now that
+  // exhausted topics are never re-served; it stays for archive compatibility.
+  return { resolved: { slot, topic, fact, repeat: false, pool: topicIds.length } };
 }
 
-function generate({ date, weekday, topics, schedule, progress }) {
+function isExhausted(topics, progress, topicId) {
+  return (progress[topicId]?.next_index ?? 0) >= factsFor(topics, topicId).length;
+}
+
+// A topic flagged `cycled` whose cursor is behind its fact count has had new
+// facts appended since it ran out. Clear the flag so it is drawable again and
+// its next exhaustion alerts again. Mutates progress; returns re-armed ids.
+export function rearmExhausted(topics, progress) {
+  const rearmed = [];
+  for (const [id, entry] of Object.entries(progress)) {
+    if (entry?.cycled === true && !isExhausted(topics, progress, id)) {
+      progress[id] = { ...entry, cycled: false };
+      rearmed.push(id);
+    }
+  }
+  return rearmed;
+}
+
+export function generate({ date, weekday, topics, schedule, progress }) {
+  const rearmed = rearmExhausted(topics, progress);
   const slotList = resolveSlotList(schedule, weekday, date);
   const slots = [];
   const unresolved = [];
@@ -187,7 +195,7 @@ function generate({ date, weekday, topics, schedule, progress }) {
   const today = { date, slots };
   if (unresolved.length > 0) today.unresolved = unresolved;
 
-  return { today, progress, newlyCycled: [...newlyCycled], unresolved };
+  return { today, progress, newlyCycled: [...newlyCycled], unresolved, rearmed };
 }
 
 // ---------------------------------------------------------------------------
@@ -207,7 +215,7 @@ function main() {
   const schedule = readJSON(join(CONTENT, "schedule.json"));
   const progress = readJSON(join(CONTENT, "progress.json"));
 
-  const { today, newlyCycled, unresolved } = generate({
+  const { today, newlyCycled, unresolved, rearmed } = generate({
     date,
     weekday,
     topics,
@@ -215,7 +223,8 @@ function main() {
     progress,
   });
 
-  // Merge newly cycled topics into flags.json (append-only, unique).
+  // Merge newly exhausted topics into flags.json (unique), and drop re-armed
+  // ones so their next exhaustion is flagged again.
   const flagsPath = join(CONTENT, "flags.json");
   let flags;
   try {
@@ -224,6 +233,7 @@ function main() {
     flags = { cycled_topics: [] };
   }
   const cycledSet = new Set(flags.cycled_topics ?? []);
+  for (const t of rearmed) cycledSet.delete(t);
   for (const t of newlyCycled) cycledSet.add(t);
   flags.cycled_topics = [...cycledSet];
 
@@ -231,13 +241,16 @@ function main() {
   console.log(`Daily Facts generation — ${date} (${weekday})`);
   console.log(`  slots resolved: ${today.slots.length}`);
   for (const s of today.slots) {
-    console.log(`    [${s.slot}] <${s.topic}>${s.repeat ? " (repeat)" : ""}`);
+    console.log(`    [${s.slot}] <${s.topic}>`);
   }
   if (unresolved.length > 0) {
-    console.log(`  UNRESOLVED (no content): ${unresolved.join(", ")}`);
+    console.log(`  UNRESOLVED (nothing unread): ${unresolved.join(", ")}`);
+  }
+  if (rearmed.length > 0) {
+    console.log(`  RE-ARMED (new facts): ${rearmed.join(", ")}`);
   }
   if (newlyCycled.length > 0) {
-    console.log(`  NEWLY CYCLED (add more facts): ${newlyCycled.join(", ")}`);
+    console.log(`  NEWLY EXHAUSTED (add more facts): ${newlyCycled.join(", ")}`);
   }
 
   if (dryRun) {
@@ -252,4 +265,5 @@ function main() {
   writeJSON(flagsPath, flags);
 }
 
-main();
+// Run only when executed directly, so tests can import generate().
+if (process.argv[1] === fileURLToPath(import.meta.url)) main();

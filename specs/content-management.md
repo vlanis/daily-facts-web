@@ -35,13 +35,11 @@ add a `dates` entry for a specific day. This never touches
 `topics.json` or `progress.json`, so it cannot affect what's already been
 served; it only changes what gets pulled going forward.
 
-### Re-arm a cycled topic
-`progress.json`'s `cycled: true` is sticky by design (see
-`specs/generation-algorithm.md`). After adding enough new facts to a
-topic that the owner wants it treated as "fresh" again, manually set that
-topic's `cycled` back to `false` in `content/progress.json`. This is the
-one field in that file expected to be hand-edited occasionally; everything
-else in it is machine-managed.
+### Refill an exhausted topic
+Append facts to it (via drafts + `import-drafts.mjs`). Nothing else: an
+exhausted topic's cursor is parked at its end, so the next nightly run
+re-arms it (`cycled` → `false`, removed from `flags.json`) and serves the
+first new fact. `progress.json` is never hand-edited for this.
 
 ## Recommended validation (script or CI check)
 
@@ -65,6 +63,5 @@ generation workflow in `specs/automation.md`.
 
 - `site/today.json` and `site/archive/*.json` — fully generated, edits
   will be overwritten by the next run.
-- `progress.json`'s `next_index` values — hand-editing these can cause a
-  fact to be skipped or re-served; the only field in this file meant for
-  manual edits is `cycled` (see above).
+- `progress.json` — fully machine-managed; hand-editing `next_index` can
+  cause a fact to be skipped or re-served.

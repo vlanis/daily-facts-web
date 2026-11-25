@@ -113,10 +113,13 @@ the system is either derived from this or additive to it.
   from may be absent (treat as `{ next_index: 0, cycled: false }`).
 - `next_index`: the index into `topics[topic].facts` that the *next* draw
   from this topic will use.
-- `cycled`: set to `true` the first time a draw wraps `next_index` back to
-  `0` because it reached the end of the facts array. Never reset to
-  `false` automatically — only a manual edit (e.g. after adding enough new
-  content that the owner wants to re-arm the flag) changes it back.
+  It never wraps: once a topic's last fact is served, `next_index` equals
+  the facts array length and stays there until facts are appended.
+  `next_index > length` is invalid.
+- `cycled`: `true` means "exhausted, waiting for new facts" — set when a
+  draw serves the topic's last fact. The generation job clears it
+  automatically on the next run after facts are appended (see
+  `specs/generation-algorithm.md`, Step 1b). The name is historical.
 - This file is only ever written by the daily generation job. Nothing else
   in the system mutates it.
 
@@ -137,8 +140,9 @@ This is the **only** file the static site reads at runtime.
 }
 ```
 
-`repeat: true` marks a draw that happened after every topic in that slot's
-list had already cycled (see `specs/generation-algorithm.md`).
+`repeat` is always `false` for days generated since 2026-11; older archive
+files may carry `repeat: true`, from when exhausted topics wrapped around
+and were re-served (see `specs/generation-algorithm.md`).
 
 `pool` is how many topics the slot was **configured** to choose between —
 `schedule.json`'s `topics` length — not how many were viable on the day.

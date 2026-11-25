@@ -39,6 +39,14 @@ runs once per day, inside the GitHub Actions job described in
 If the resolved list is empty, `today.json` is written with an empty
 `slots` array. This is valid (a day with nothing scheduled).
 
+## Step 1b: Re-arm topics that received new facts
+
+Before resolving slots, any topic with `cycled: true` whose `next_index` is
+now below its fact count (facts were appended since it ran out) gets
+`cycled` set back to `false`, and is removed from `content/flags.json`
+so its next exhaustion is flagged again. This is automatic; nobody edits
+`progress.json` to re-arm a topic.
+
 ## Step 2: Resolve each slot, in order, sequentially
 
 Slots are processed **one at a time, in list order**, and each draw
@@ -56,30 +64,28 @@ For each slot `{ slot, topics }`:
    must match the calendar day (see `specs/data-model.md`); because they stay
    out of the read queue entirely, a missed run cannot desync them, and the
    same fact is served every time that date comes round.
-1. **Filter to un-cycled topics.** From `topics`, build the subset where
-   `progress[topic].cycled` is `false` (or the topic has no progress entry
-   yet, which counts as not cycled).
-   - Also exclude any topic whose `facts` array in `topics.json` is
-     currently empty — it has nothing to draw regardless of cycled state.
+1. **Filter to topics with unread facts.** A topic is **exhausted** when
+   `progress[topic].next_index >= length(topics[topic].facts)` (a missing
+   progress entry counts as `next_index: 0`, so an empty topic is
+   exhausted too). Build the subset of the slot's topics that are not
+   exhausted.
 2. **Pick the topic to draw from:**
-   - If the filtered (un-cycled, non-empty) subset is non-empty, pick one
-     topic uniformly at random from it. This draw is **not** a repeat.
-   - Otherwise, fall back to the full `topics` list, excluding only
-     currently-empty topics. Pick one uniformly at random. This draw
-     **is** a repeat (`repeat: true` in the output).
-   - If every topic in the slot's list has an empty `facts` array (no
-     content at all for this slot), skip the slot entirely and record it
-     as unresolved (see "Edge cases" below) rather than erroring the whole
-     run.
+   - If that subset is non-empty, pick one topic uniformly at random from
+     it.
+   - Otherwise there is nothing unread anywhere in the slot: skip the slot
+     and record it as unresolved (see "Edge cases" below). There are no
+     repeat draws — an exhausted topic is never re-served, and past days
+     stay readable in the archive. `repeat` is therefore always `false`
+     in new output; the field is kept so older archive files stay valid.
 3. **Draw the fact:**
    - `index = progress[topic].next_index` (default `0` if absent)
    - `fact = topics[topic].facts[index]`
 4. **Advance the cursor:**
    - `next_index = index + 1`
-   - If `next_index >= length(topics[topic].facts)`: wrap `next_index` to
-     `0` and set `cycled = true`.
-   - Otherwise leave `cycled` as-is (do not clear a previously-set `true`
-     — cycling is sticky until manually reset).
+   - No wrap. If `next_index >= length(topics[topic].facts)`, the cursor
+     stays parked at the end and `cycled` is set to `true` (the topic is
+     exhausted). Facts appended later sit exactly at that cursor, so they
+     are the next ones served — no cursor ever needs recomputing.
    - Write these back into the in-memory progress state immediately, so
      subsequent slots in the same run see the update.
 5. **Record the result:** `{ slot, topic, fact, repeat, pool }` appended to
@@ -98,7 +104,7 @@ For each slot `{ slot, topics }`:
 
 ## Edge cases
 
-- **Slot with no viable topic (all empty):** omit from `today.json`'s
+- **Slot with no viable topic (every topic exhausted or empty):** omit from `today.json`'s
   `slots` array, but include it in a separate `unresolved` array in the
   same file (or in the cycle-alert channel) so it's visible rather than
   silently missing:
@@ -113,15 +119,15 @@ For each slot `{ slot, topics }`:
   expected (e.g. a dedicated "Literature" slot and an "Other" pool that
   includes literature). Sequential processing (Step 2) guarantees the
   second draw gets the next fact in queue, never a duplicate.
-- **A slot's topic list becomes fully cycled:** every future draw from
-  that slot is a `repeat: true` draw until new facts are added to at least
-  one of its topics. This is expected, visible behavior, not an error
-  state.
+- **A slot's topic list becomes fully exhausted:** the slot is left off
+  every day's page (and listed in `unresolved`) until new facts are
+  appended to at least one of its topics. This is expected, visible
+  behavior, not an error state.
 
 ## Cycle handling / alerting
 
 Whenever Step 2 sets `cycled` from `false` to `true` for a topic during a
-run, record that transition. At the end of the run, if any topics newly
+run (the topic just served its last fact), record that transition. At the end of the run, if any topics newly
 cycled, surface it — see `specs/automation.md` for the mechanism
 (flags file vs. GitHub Issue). This should happen once per transition, not
 repeat on every subsequent run while the topic remains cycled.

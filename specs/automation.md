@@ -81,6 +81,8 @@ UTC+2/UTC+3 offset, so this stays correct without maintenance.
      `content/progress.json`.
    - If any topic newly cycled this run, writes/updates a cycle alert
      (see below).
+   - Drops any topic re-armed this run (new facts appended) from the
+     alert list, so its next exhaustion is flagged again.
 4. Commit changed files with a clear message, e.g.
    `chore: generate facts for 2026-08-02`.
    - Use a bot identity for the commit author (standard
