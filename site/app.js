@@ -1,5 +1,6 @@
 // Daily Facts — static reader.
-// Loads site/today.json (the only runtime data source) and renders it.
+// Loads site/today.json (Today) or site/archive/<date>.json (a past day, via
+// #YYYY-MM-DD) and renders it; archive/index.json drives the ‹ › navigation.
 // No backend calls, no write-backs. See specs/ui.md.
 
 (function () {
@@ -187,28 +188,181 @@
     slotsEl.appendChild(frag);
   }
 
-  function render(data) {
-    if (!data || typeof data !== "object" || !Array.isArray(data.slots)) {
-      throw new Error("malformed today.json");
-    }
-    dateEl.textContent = formatDate(data.date);
+  // ---------------------------------------------------------------------------
+  // Views: Today (today.json, no hash) or a past day (#YYYY-MM-DD, read from
+  // archive/<date>.json). Archive files never change, so they use normal HTTP
+  // caching; today.json and the index are fetched no-store.
+  // ---------------------------------------------------------------------------
 
-    if (data.slots.length === 0) {
+  var Nav = window.DailyFactsNav;
+  var datelineEl = document.getElementById("dateline");
+  var prevBtn = document.getElementById("prev");
+  var nextBtn = document.getElementById("next");
+  var pickerEl = document.getElementById("date-picker");
+  var backEl = document.getElementById("back-today");
+
+  function fetchJSON(url, opts) {
+    return fetch(url, opts).then(function (res) {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    });
+  }
+
+  function isValidDay(data) {
+    return !!data && typeof data === "object" && Array.isArray(data.slots);
+  }
+
+  // Local calendar date as YYYY-MM-DD — only a fallback for "today" when
+  // today.json itself failed to load.
+  function localISODate() {
+    var d = new Date();
+    function pad(n) {
+      return (n < 10 ? "0" : "") + n;
+    }
+    return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  }
+
+  var todayLoad = fetchJSON("today.json?_=" + Date.now(), { cache: "no-store" }).then(
+    function (data) {
+      return isValidDay(data) ? data : null;
+    },
+    function () {
+      return null;
+    },
+  );
+
+  // A missing or broken index just switches browsing off; Today is unaffected.
+  var indexLoad = fetchJSON("archive/index.json?_=" + Date.now(), { cache: "no-store" }).then(
+    function (data) {
+      return data && Array.isArray(data.dates) && data.dates.length ? data.dates : null;
+    },
+    function () {
+      return null;
+    },
+  );
+
+  function clearView() {
+    slotsEl.textContent = "";
+    statusEl.textContent = "";
+    statusEl.hidden = true;
+  }
+
+  function showToday(today) {
+    if (!today) {
+      dateEl.textContent = "Today";
+      showStatus("Today's facts aren't ready yet. Please check back soon.");
+      return;
+    }
+    dateEl.textContent = formatDate(today.date);
+    if (today.slots.length === 0) {
       showStatus("Nothing scheduled today. Check back tomorrow.");
+      return;
+    }
+    renderSlots(today.slots);
+  }
+
+  function showPastDay(date, data) {
+    dateEl.textContent = formatDate(date);
+    if (!isValidDay(data) || data.slots.length === 0) {
+      showStatus("No facts for this day.");
       return;
     }
     renderSlots(data.slots);
   }
 
-  // Cache-bust so a freshly generated today.json is picked up promptly.
-  fetch("today.json?_=" + Date.now(), { cache: "no-store" })
-    .then(function (res) {
-      if (!res.ok) throw new Error("HTTP " + res.status);
-      return res.json();
-    })
-    .then(render)
-    .catch(function () {
-      dateEl.textContent = "Today";
-      showStatus("Today's facts aren't ready yet. Please check back soon.");
+  function updateNav(dates, current, todayDate) {
+    if (!dates) {
+      datelineEl.classList.add("no-archive");
+      pickerEl.disabled = true;
+      backEl.hidden = true;
+      return;
+    }
+    var n = Nav.neighbours(dates, current, todayDate);
+    prevBtn.classList.toggle("is-off", !n.prev);
+    prevBtn.disabled = !n.prev;
+    prevBtn.setAttribute("data-target", n.prev || "");
+    nextBtn.classList.toggle("is-off", !n.next);
+    nextBtn.disabled = !n.next;
+    nextBtn.setAttribute("data-target", n.next || "");
+    pickerEl.disabled = false;
+    pickerEl.min = dates[0];
+    pickerEl.max = todayDate;
+    pickerEl.value = current || todayDate;
+    backEl.hidden = !current;
+  }
+
+  // Guards against a slow archive fetch overwriting a newer navigation.
+  var routeSeq = 0;
+
+  function route() {
+    var seq = ++routeSeq;
+    Promise.all([todayLoad, indexLoad]).then(function (loaded) {
+      if (seq !== routeSeq) return;
+      var today = loaded[0];
+      var dates = loaded[1];
+      var todayDate = today ? today.date : localISODate();
+
+      // Junk, today's own date, or a future date all mean the Today view;
+      // tidy the URL so it doesn't keep a meaningless hash.
+      var target = Nav.parseHash(location.hash);
+      if (target && target >= todayDate) target = null;
+      if (!target && location.hash) {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
+
+      if (!target) {
+        clearView();
+        showToday(today);
+        updateNav(dates, null, todayDate);
+        return;
+      }
+
+      var known = !dates || dates.indexOf(target) !== -1;
+      var load = known
+        ? fetchJSON("archive/" + target + ".json").catch(function () {
+            return null;
+          })
+        : Promise.resolve(null);
+      load.then(function (data) {
+        if (seq !== routeSeq) return;
+        clearView();
+        showPastDay(target, data);
+        updateNav(dates, target, todayDate);
+      });
     });
+  }
+
+  // "today" or a YYYY-MM-DD. pushState keeps the back button retracing steps.
+  function go(target) {
+    var url = target === "today" ? location.pathname + location.search : "#" + target;
+    history.pushState(null, "", url);
+    window.scrollTo(0, 0);
+    route();
+  }
+
+  function onArrow(e) {
+    var target = e.currentTarget.getAttribute("data-target");
+    if (target) go(target);
+  }
+
+  prevBtn.addEventListener("click", onArrow);
+  nextBtn.addEventListener("click", onArrow);
+
+  pickerEl.addEventListener("change", function () {
+    var v = pickerEl.value;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v)) return;
+    go(v >= pickerEl.max ? "today" : v);
+  });
+
+  backEl.addEventListener("click", function (e) {
+    e.preventDefault();
+    go("today");
+  });
+
+  // Back/forward and hand-edited hashes. Both events can fire for one
+  // traversal; routeSeq makes the duplicate harmless.
+  window.addEventListener("popstate", route);
+  window.addEventListener("hashchange", route);
+
+  route();
 })();

@@ -16,18 +16,29 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="manifest" href="manifest.webmanifest" />
 
-    <!-- ?v= is a cache-busting marker: BUMP IT whenever styles.css or app.js
+    <!-- ?v= is a cache-busting marker: BUMP IT (all three) whenever styles.css, nav.js or app.js
          changes. GitHub Pages serves these with max-age=600 and an iOS
          home-screen shortcut holds them longer still, so without a new URL a
          deployed fix can sit behind a stale copy on the reader's phone.
          today.json needs no marker — app.js already fetches it no-store. -->
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=6" />
   </head>
   <body>
     <main class="page" id="page">
       <header class="masthead">
         <p class="eyebrow">Daily Facts</p>
-        <h1 class="date" id="date">&nbsp;</h1>
+        <div class="dateline" id="dateline">
+          <button type="button" class="nav-btn" id="prev" aria-label="Previous day">‹</button>
+          <div class="date-wrap">
+            <h1 class="date" id="date">&nbsp;</h1>
+            <!-- Invisible native date input laid over the heading: tapping the
+                 date opens the iOS date wheel. Disabled until the archive
+                 index has loaded. -->
+            <input type="date" class="date-picker" id="date-picker" aria-label="Choose a day" disabled />
+          </div>
+          <button type="button" class="nav-btn" id="next" aria-label="Next day">›</button>
+        </div>
+        <a class="back-today" id="back-today" href="./" hidden>Back to today</a>
       </header>
 
       <section id="slots" class="slots" aria-live="polite"></section>
@@ -35,6 +46,7 @@
       <p class="status" id="status" hidden></p>
     </main>
 
-    <script src="app.js?v=5" defer></script>
+    <script src="nav.js?v=6" defer></script>
+    <script src="app.js?v=6" defer></script>
   </body>
 </html>

@@ -82,13 +82,30 @@ section exists to prevent.
 - No topic/schedule browsing UI — that's a repo-editing concern, see
   `specs/content-management.md`.
 
-## Optional stretch: Archive / past facts view
+## Past days (archive view)
 
-Since `site/archive/<date>.json` is produced daily at near-zero marginal
-cost, a simple "browse past days" view is a natural low-cost addition:
-a date picker or simple list linking to each archived day, rendered with
-the same card layout as Today. Not required for v1; flag as a fast-follow
-rather than blocking initial launch.
+Read-only browsing of earlier days, rendered with the same cards as Today.
+Design: `docs/superpowers/specs/2026-11-26-archive-browsing-design.md`.
+
+- **Masthead:** `‹  <date>  ›`. ‹ goes to the previous archived day, ›
+  to the next one, or back to Today from the newest; both skip days with
+  no archive file (e.g. pre-launch 2026-08-09…08-24), using
+  `archive/index.json` (see `specs/data-model.md`). An arrow with
+  nowhere to go is invisible but keeps its space, so the date never shifts.
+- **Date picker:** tapping the date opens the native date input
+  (`min` = first archived day, `max` = today). Picking today returns to
+  the Today view.
+- **URLs:** no hash = Today (`today.json`, exactly as before);
+  `#YYYY-MM-DD` = that day's `archive/<date>.json`. Arrows push history
+  entries, so the browser back button retraces steps. A junk, impossible,
+  today's or future hash shows Today and the hash is removed.
+- **"Back to today"** link under the date on any past day.
+- **A day with no archive file** shows "No facts for this day." with the
+  arrows still usable.
+- **No index** (missing/failed `archive/index.json`): arrows and picker
+  are not shown; Today renders exactly as before.
+- `site/nav.js` holds the pure helpers (`parseHash`, `neighbours`),
+  tested by `tests/nav.test.mjs`.
 
 ## Visual design
 

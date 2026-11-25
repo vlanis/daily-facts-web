@@ -56,6 +56,95 @@ body {
   color: var(--ink);
 }
 
+/* Day navigation: ‹ date ›. The arrows keep their space when unavailable
+   (visibility, not display) so the date never jumps sideways. Without an
+   archive index the whole control collapses to a plain heading. */
+.dateline {
+  display: grid;
+  grid-template-columns: 2.75rem minmax(0, 1fr) 2.75rem;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0 -0.75rem;
+}
+
+.dateline.no-archive {
+  display: block;
+  margin: 0;
+}
+
+.dateline.no-archive .nav-btn {
+  display: none;
+}
+
+.nav-btn {
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-btn:active {
+  background: var(--line);
+}
+
+.nav-btn.is-off {
+  visibility: hidden;
+}
+
+.date-wrap {
+  position: relative;
+  text-align: center;
+}
+
+/* A long date wraps to two lines between the arrows at phone width. */
+.date-wrap .date {
+  line-height: 1.25;
+}
+
+.dateline.no-archive .date-wrap {
+  text-align: left;
+}
+
+/* Invisible but tappable: covers the heading so a tap opens the native
+   picker. 16px font stops iOS zooming on focus. */
+.date-picker {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.date-picker:disabled {
+  display: none;
+}
+
+.back-today {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.back-today[hidden] {
+  display: none;
+}
+
 /* Slots */
 .slots {
   display: grid;
