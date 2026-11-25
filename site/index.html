@@ -28,7 +28,7 @@
       <header class="masthead">
         <p class="eyebrow">Daily Facts</p>
         <div class="dateline" id="dateline">
-          <button type="button" class="nav-btn" id="prev" aria-label="Previous day">‹</button>
+          <button type="button" class="nav-btn is-off" id="prev" aria-label="Previous day" disabled>‹</button>
           <div class="date-wrap">
             <h1 class="date" id="date">&nbsp;</h1>
             <!-- Invisible native date input laid over the heading: tapping the
@@ -36,7 +36,7 @@
                  index has loaded. -->
             <input type="date" class="date-picker" id="date-picker" aria-label="Choose a day" disabled />
           </div>
-          <button type="button" class="nav-btn" id="next" aria-label="Next day">›</button>
+          <button type="button" class="nav-btn is-off" id="next" aria-label="Next day" disabled>›</button>
         </div>
         <a class="back-today" id="back-today" href="./" hidden>Back to today</a>
       </header>
