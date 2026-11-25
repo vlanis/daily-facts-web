@@ -153,9 +153,20 @@ back, so archived files predating the field stay valid.
 
 ### `site/archive/YYYY-MM-DD.json`
 
-Optional but recommended: a permanent copy of each day's `today.json`,
-named by date, so history isn't lost when `today.json` is overwritten the
-next day. Enables a future "past facts" browse view at near-zero cost now.
+A permanent copy of each day's `today.json`, named by date, so history
+isn't lost when `today.json` is overwritten the next day. The reader's
+past-days view loads these directly (see `specs/ui.md`).
+
+### `site/archive/index.json`
+
+```json
+{ "dates": ["2026-08-03", "2026-08-04", "…", "2026-11-25"] }
+```
+
+Every date that has an archive file, ascending. Fully derived: the
+generation job rebuilds it from the directory listing on every run, so it
+never drifts and gaps (e.g. pre-launch days) are simply absent. Never
+hand-edited.
 
 ### Cycle flags / alerts
 

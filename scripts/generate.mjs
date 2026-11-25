@@ -15,7 +15,7 @@
 // no scheduled slots, or slots with no viable content, is a valid outcome and
 // is surfaced in the output rather than treated as an error.
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -198,6 +198,17 @@ export function generate({ date, weekday, topics, schedule, progress }) {
   return { today, progress, newlyCycled: [...newlyCycled], unresolved, rearmed };
 }
 
+// The reader's list of browsable days: every dated archive file, ascending.
+// Rebuilt from the directory on each run, so it can never drift from what's
+// actually there (gaps such as pre-launch days are simply absent).
+export function buildArchiveIndex(archiveDir) {
+  const dates = readdirSync(archiveDir)
+    .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
+    .map((f) => f.slice(0, 10))
+    .sort();
+  return { dates };
+}
+
 // ---------------------------------------------------------------------------
 // Entry point
 // ---------------------------------------------------------------------------
@@ -261,6 +272,7 @@ function main() {
 
   writeJSON(join(SITE, "today.json"), today);
   writeJSON(join(SITE, "archive", `${date}.json`), today);
+  writeJSON(join(SITE, "archive", "index.json"), buildArchiveIndex(join(SITE, "archive")));
   writeJSON(join(CONTENT, "progress.json"), progress);
   writeJSON(flagsPath, flags);
 }

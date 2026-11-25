@@ -78,3 +78,15 @@ test("pinned slot untouched", () => {
   assert.equal(r.today.slots[0].fact, "a-0");
   assert.deepEqual(r.progress.a, { next_index: 2, cycled: true });
 });
+
+test("buildArchiveIndex lists dated files sorted", async () => {
+  const { buildArchiveIndex } = await import("../scripts/generate.mjs");
+  const { mkdtempSync, writeFileSync } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const { join } = await import("node:path");
+  const dir = mkdtempSync(join(tmpdir(), "dailyfacts-archive-"));
+  for (const f of ["2026-08-05.json", "2026-08-03.json", "index.json", "notes.txt"]) {
+    writeFileSync(join(dir, f), "{}");
+  }
+  assert.deepEqual(buildArchiveIndex(dir), { dates: ["2026-08-03", "2026-08-05"] });
+});

@@ -77,7 +77,8 @@ UTC+2/UTC+3 offset, so this stays correct without maintenance.
      `content/progress.json`.
    - Computes today's Kyiv-local date.
    - Runs the algorithm in `specs/generation-algorithm.md`.
-   - Writes `site/today.json`, `site/archive/<date>.json`, updates
+   - Writes `site/today.json`, `site/archive/<date>.json`,
+     `site/archive/index.json`, updates
      `content/progress.json`.
    - If any topic newly cycled this run, writes/updates a cycle alert
      (see below).

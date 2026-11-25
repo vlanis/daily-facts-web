@@ -19,6 +19,7 @@ runs once per day, inside the GitHub Actions job described in
 
 - `site/today.json` (overwritten)
 - `site/archive/<date>.json` (new file, one per day)
+- `site/archive/index.json` (rebuilt list of archived dates)
 - Updated `content/progress.json`, committed back to the repo
 - Any cycle alerts (see "Cycle handling" below)
 
@@ -99,6 +100,8 @@ For each slot `{ slot, topics }`:
 - `site/today.json`: `{ date, slots: [...] }` as defined in
   `specs/data-model.md`.
 - `site/archive/<date>.json`: identical content, permanent copy.
+- `site/archive/index.json`: `{ dates }` rebuilt from the archive
+  directory listing (see `specs/data-model.md`).
 - `content/progress.json`: the fully updated progress state from Step 2.
 - Commit all three in a single commit (see `specs/automation.md`).
 
