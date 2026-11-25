@@ -14,7 +14,8 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const CONTENT = join(ROOT, "content");
+// DAILYFACTS_CONTENT_DIR lets tests point the validator at a fixture dir.
+const CONTENT = process.env.DAILYFACTS_CONTENT_DIR ?? join(ROOT, "content");
 
 const WEEKDAY_KEYS = [
   "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
@@ -176,6 +177,13 @@ if (progress && typeof progress === "object" && !Array.isArray(progress)) {
     }
     if (typeof entry?.cycled !== "boolean") {
       err(`progress.json: topic "${id}" has non-boolean cycled`);
+    }
+    // A cursor equal to the fact count is valid: the topic is exhausted and
+    // parked at its end (it never wraps). Beyond that, a fact would be skipped.
+    const factCount = topics?.[id]?.facts?.length;
+    if (typeof entry?.next_index === "number" && typeof factCount === "number" &&
+        entry.next_index > factCount) {
+      err(`progress.json: topic "${id}" next_index ${entry.next_index} is beyond its ${factCount} facts`);
     }
     if (!topicIds.has(id)) {
       warn(`progress.json: topic "${id}" has no matching entry in topics.json`);
