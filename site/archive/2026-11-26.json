@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-26",
+  "slots": [
+    {
+      "slot": "Literature",
+      "topic": "literature",
+      "fact": "Джейн Остін за життя публікувалася анонімно. На титулі «Гордості й упередження» стояло не її ім'я, а «Від авторки „Чуття і чутливості“». Ім'я Остін уперше з'явилося на її книжках лише посмертно, 1817 року.",
+      "repeat": false,
+      "pool": 3
+    },
+    {
+      "slot": "English",
+      "topic": "english",
+      "fact": "\"Make\" versus \"do\" has a rough rule: \"do\" is for activities and duties (do homework, do the dishes, do business), \"make\" is for creating or producing something (make a cake, make a mistake, make a decision). The exceptions just have to be memorised — \"make the bed\" is one.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Popculture",
+      "topic": "popculture",
+      "fact": "Міккі Маус уперше заговорив лише 1929 року, через рік після дебюту. Його першими словами були «Хот-доги! Хот-доги!», а озвучував мишеня до 1947 року сам Волт Дісней.",
+      "repeat": false,
+      "pool": 2
+    },
+    {
+      "slot": "Space",
+      "topic": "space",
+      "fact": "Зорі, які ми бачимо неозброєним оком, майже всі розташовані в межах кількох тисяч світлових років — це крихітний куточок нашої Галактики. Чумацький Шлях має в діаметрі близько ста тисяч світлових років.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Medicine",
+      "topic": "medicine",
+      "fact": "Шкіра — найбільший орган людини: у дорослого вона важить кілька кілограмів і має площу близько двох квадратних метрів. За добу ми скидаємо десятки тисяч відмерлих клітин шкіри — помітна частка домашнього пилу походить саме звідти.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Urban Dictionary",
+      "topic": "urban_dictionary",
+      "fact": "**Situationship** — a romantic relationship that is more than friendship but has never been defined or committed to. *\"Are you two dating?\" — \"It's more of a situationship.\"* Oxford shortlisted it for Word of the Year 2023.",
+      "repeat": false,
+      "pool": 1
+    },
+    {
+      "slot": "Things",
+      "topic": "animals",
+      "fact": "Собаки розрізняють запахи в концентраціях у десятки тисяч разів менших за поріг людини. Це дає їм змогу вивчати не лише те, хто тут проходив, а й коли: за швидкістю вивітрювання сліду собака оцінює, наскільки той свіжий.",
+      "repeat": false,
+      "pool": 3
+    }
+  ]
+}
