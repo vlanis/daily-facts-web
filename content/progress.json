@@ -4,7 +4,7 @@
     "cycled": false
   },
   "english": {
-    "next_index": 27,
+    "next_index": 28,
     "cycled": false
   },
   "legends_ua": {
@@ -12,7 +12,7 @@
     "cycled": false
   },
   "space": {
-    "next_index": 40,
+    "next_index": 41,
     "cycled": false
   },
   "useless_facts": {
@@ -24,7 +24,7 @@
     "cycled": false
   },
   "ukrainian_words": {
-    "next_index": 26,
+    "next_index": 27,
     "cycled": false
   },
   "japanese": {
@@ -36,7 +36,7 @@
     "cycled": false
   },
   "legends_urban": {
-    "next_index": 23,
+    "next_index": 24,
     "cycled": false
   },
   "technology": {
@@ -64,7 +64,7 @@
     "cycled": false
   },
   "literature_ua": {
-    "next_index": 22,
+    "next_index": 23,
     "cycled": false
   },
   "english_words": {
@@ -72,7 +72,7 @@
     "cycled": true
   },
   "popculture_modern": {
-    "next_index": 19,
+    "next_index": 20,
     "cycled": false
   },
   "urban_dictionary": {
@@ -100,11 +100,11 @@
     "cycled": false
   },
   "book_fantasy": {
-    "next_index": 6,
+    "next_index": 7,
     "cycled": false
   },
   "ai": {
-    "next_index": 11,
+    "next_index": 12,
     "cycled": false
   },
   "verse": {
